@@ -1,0 +1,29 @@
+<script setup lang="ts">
+// This starter template is using Vue 3 <script setup> SFCs
+// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
+import { useDependency } from 'packages'
+import HelloWorld from './components/HelloWorld.vue'
+import { TestService } from './test.service'
+const testService = useDependency(TestService)
+function changeTest() {
+    testService.Test.value = '父组件的2'
+}
+</script>
+
+<template>
+    {{ testService.Test }}
+    <button @click="changeTest">修改</button>
+    <img alt="Vue logo" src="./assets/logo.png" />
+    <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+</template>
+
+<style>
+#app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 60px;
+}
+</style>
