@@ -2,7 +2,6 @@ import { Injector } from '@wendellhu/redi'
 import { defineComponent, h, inject, provide } from 'vue'
 import { RouteRecordRaw, RouterView } from 'vue-router'
 import { VUE_INJECTOR_KEY } from '../module'
-import { Scan } from '../module/scan'
 import type { VdiRouterRaw } from './type'
 
 export default function ModuleEmptyComponent(moduleConfig: any) {

@@ -1,4 +1,4 @@
-import { Inject, forwardRef, Many } from '@wendellhu/redi'
+import { Many } from '@wendellhu/redi'
 import { Router } from 'vue-router'
 import { ROUTER_GUARD } from './routerToken'
 import { RouterGuardImplements } from './type'

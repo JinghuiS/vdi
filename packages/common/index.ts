@@ -6,3 +6,5 @@ export const CommonModule = vueModule({
 })
 
 export * from './directive'
+
+export * from './components'

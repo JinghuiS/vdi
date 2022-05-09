@@ -1,11 +1,14 @@
-<script setup lang="ts">
+<script setup lang="tsx">
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import { onProvider, useDependency } from 'packages'
+import { useOverlay } from 'packages/common/components/overlay/useOverlay'
 import HelloWorld from './components/HelloWorld.vue'
 import { TestService } from './test.service'
+
 // onProvider([[TestService]])
 const testService = useDependency(TestService, { self: true })
+
 function changeTest(a: any) {
     testService.Test.value = '父组件的2'
 }

@@ -8,7 +8,6 @@ export class ThrottleDirective implements DirectiveImplements {
         let timer: number
         let interval = 200 || Number(binding.arg)
         let now = +new Date()
-        console.log(binding)
 
         function onClick(..._args: any[]) {
             if (last && now - last < interval) {

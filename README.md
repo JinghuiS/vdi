@@ -4,6 +4,6 @@
 
 ## 安装
 
-> npm `npm i vdi @wendellhu/redi `
-> yarn `yarn add vdi @wendellhu/redi `
-> pnpm `pnpm add vdi @wendellhu/redi `
+-npm `npm i vdi @wendellhu/redi `
+-yarn `yarn add vdi @wendellhu/redi `
+-pnpm `pnpm add vdi @wendellhu/redi `
