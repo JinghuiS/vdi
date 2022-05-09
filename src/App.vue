@@ -1,20 +1,22 @@
 <script setup lang="ts">
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import { useDependency } from 'packages'
+import { onProvider, useDependency } from 'packages'
 import HelloWorld from './components/HelloWorld.vue'
 import { TestService } from './test.service'
-const testService = useDependency(TestService)
-function changeTest() {
+// onProvider([[TestService]])
+const testService = useDependency(TestService, { self: true })
+function changeTest(a: any) {
     testService.Test.value = '父组件的2'
 }
 </script>
 
 <template>
     {{ testService.Test }}
-    <button @click="changeTest">修改</button>
+    <button v-throttle-click:3000="changeTest">修改</button>
     <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+    <HelloWorld :msg="'1'" />
+    <router-view></router-view>
 </template>
 
 <style>

@@ -10,6 +10,9 @@ export function useInjector(selfInject: boolean = false) {
         return instance!.provides[VUE_INJECTOR_KEY]
     }
     const injector = inject<Injector>(VUE_INJECTOR_KEY)
+    if (!injector) {
+        return new Injector()
+    }
     return injector
 }
 export function useDependency<T>(

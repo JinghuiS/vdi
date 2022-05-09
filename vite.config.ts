@@ -1,6 +1,5 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-// https://vitejs.dev/config/
 export default defineConfig({
     resolve: {
         alias: [
@@ -18,8 +17,8 @@ export default defineConfig({
             formats: ['es', 'cjs']
         },
         rollupOptions: {
-            external: ['vue', 'vue-router']
+            external: ['@wendellhu/redi', 'vue', 'vue-router']
         },
-        minify: false
+        minify: 'esbuild'
     }
 })
