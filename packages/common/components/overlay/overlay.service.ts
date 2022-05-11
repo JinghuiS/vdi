@@ -22,13 +22,7 @@ export class OverlayService {
         document.body.appendChild(this.overlayElement)
     }
 
-    public OverLayChildElement!: Component<
-        any,
-        any,
-        any,
-        ComputedOptions,
-        MethodOptions
-    >
+    public OverLayChildElement!: any
 
     private options: any = {}
 
@@ -51,7 +45,7 @@ export class OverlayService {
                 h(
                     this.OverLayChildElement,
                     {
-                        ...this.options,
+                        options: this.options,
                         visible: this.show.value,
                         onClose: this.close.bind(this)
                     },
