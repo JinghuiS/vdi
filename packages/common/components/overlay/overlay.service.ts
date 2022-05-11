@@ -63,12 +63,16 @@ export class OverlayService {
         }
     }
 
+    private _resolve: (value?: unknown) => void = () => {}
+    private _reject: (reason?: any) => void = () => {}
     public open(overlay: OverlayType) {
         const { component, params, options } = overlay
         this.childrenComponent = component
         this.params = params
         this.options = options
         return new Promise((resolve, reject) => {
+            this._resolve = resolve
+            this._reject = reject
             this.injector.add(OverLayChildRef, {
                 useValue: {
                     close: this.close.bind(this),
@@ -84,9 +88,9 @@ export class OverlayService {
         // this.createdOverlay(false)
         this.show.value = false
         if (msg) {
-            Promise.resolve(msg)
+            this._resolve(msg)
         } else {
-            Promise.resolve()
+            this._resolve()
         }
 
         // if (this.overlayElement.parentNode) {
