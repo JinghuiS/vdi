@@ -1,5 +1,5 @@
 import { Injector } from '@wendellhu/redi'
-import { defineComponent, h, inject, provide } from 'vue'
+import { defineComponent, h, inject, onUnmounted, provide } from 'vue'
 import { RouteRecordRaw, RouterView } from 'vue-router'
 import { VUE_INJECTOR_KEY } from '../module'
 import type { VdiRouterRaw } from './type'
@@ -12,6 +12,9 @@ export default function ModuleEmptyComponent(moduleConfig: any) {
             injector.get(item)
         })
         provide(VUE_INJECTOR_KEY, injector)
+        onUnmounted(() => {
+            injector.dispose()
+        })
         return () => h(moduleConfig.declarations || RouterView)
     })
 }

@@ -1,8 +1,8 @@
 import { Dependency, DependencyIdentifier, Injector } from '@wendellhu/redi'
-import { getCurrentInstance, inject, provide } from 'vue'
+import { getCurrentInstance, inject, onUnmounted, provide } from 'vue'
 import { VUE_INJECTOR_KEY } from './moduleToken'
 
-export function useInjector(selfInject: boolean = false) {
+export function useInjector(selfInject: boolean = false): Injector {
     if (selfInject) {
         const instance = getCurrentInstance()
 
@@ -27,4 +27,7 @@ export function onProvider(dependency: Dependency[]) {
     let injector = useInjector()
     const childInjector = injector?.createChild(dependency)
     provide(VUE_INJECTOR_KEY, childInjector)
+    onUnmounted(() => {
+        childInjector.dispose()
+    })
 }

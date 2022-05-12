@@ -4,7 +4,7 @@ import { OverlayService } from './overlay.service'
 import { onUnmounted } from 'vue'
 
 export function useOverlay(overlayChild: any) {
-    const inject = useInjector()
+    const inject = useInjector(true)
     const overlayService = new OverlayService(inject)
     overlayService.OverLayChildElement = overlayChild
 
