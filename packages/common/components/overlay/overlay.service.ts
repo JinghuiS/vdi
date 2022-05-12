@@ -42,9 +42,7 @@ export class OverlayService {
     private createdOverlay() {
         const vm = defineComponent(() => {
             provide(VUE_INJECTOR_KEY, this.injector)
-            onUnmounted(() => {
-                this.injector.dispose()
-            })
+
             return () =>
                 h(
                     this.OverLayChildElement,

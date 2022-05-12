@@ -17,6 +17,7 @@ export function useOverlay(overlayChild: any) {
             )
         }
         overlayService.overlayElement = null
+        childInjector.dispose()
     })
     return {
         open: overlayService.open.bind(overlayService),
