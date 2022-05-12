@@ -5,5 +5,6 @@ export interface OverlayChildRef extends OverlayType {
     close: (msg?: any) => void
 }
 
-export const OverLayChildRef =
-    createIdentifier<OverlayChildRef>('OverLayChildRef')
+export const OverLayChildRef = createIdentifier<OverlayChildRef>(
+    'OverLayChildRef____Token'
+)

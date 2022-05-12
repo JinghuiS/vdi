@@ -2,10 +2,12 @@ import { useInjector, useDependency } from 'packages/module'
 import { OverLayChildRef } from './overlayToken'
 import { OverlayService } from './overlay.service'
 import { onUnmounted } from 'vue'
+import { Injector } from '@wendellhu/redi'
 
 export function useOverlay(overlayChild: any) {
     const inject = useInjector(true)
-    const overlayService = new OverlayService(inject)
+    const childInjector = new Injector([], inject)
+    const overlayService = new OverlayService(childInjector)
     overlayService.OverLayChildElement = overlayChild
 
     onUnmounted(() => {

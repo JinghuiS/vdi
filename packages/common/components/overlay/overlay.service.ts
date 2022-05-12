@@ -7,6 +7,7 @@ import {
     defineComponent,
     h,
     MethodOptions,
+    onUnmounted,
     provide,
     ref,
     render
@@ -41,6 +42,9 @@ export class OverlayService {
     private createdOverlay() {
         const vm = defineComponent(() => {
             provide(VUE_INJECTOR_KEY, this.injector)
+            onUnmounted(() => {
+                this.injector.dispose()
+            })
             return () =>
                 h(
                     this.OverLayChildElement,
@@ -85,17 +89,11 @@ export class OverlayService {
     }
     public close(msg?: any) {
         if (!this.overlayElement) return
-        // this.createdOverlay(false)
         this.show.value = false
         if (msg) {
             this._resolve(msg)
         } else {
             this._resolve()
         }
-
-        // if (this.overlayElement.parentNode) {
-        //     this.overlayElement.parentNode.removeChild(this.overlayElement)
-        // }
-        // this.overlayElement = null
     }
 }
