@@ -21,7 +21,10 @@
     "dev": "vite",
     "build": "vite build && rimraf types && tsc --build tsconfig-build.json",
     "preview": "vite preview",
-    "release": "pnpm build && npx release-it"
+    "release": "pnpm build && npx release-it",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs"
   },
   "homepage": "https://github.com/JinghuiS/vdi",
   "repository": {
@@ -61,13 +64,14 @@
     "vue-router": "^4.0.15"
   },
   "devDependencies": {
+    "@release-it/conventional-changelog": "^5.0.0",
     "@vitejs/plugin-vue": "^2.3.1",
+    "release-it": "^15.0.0",
     "rimraf": "^3.0.2",
     "typescript": "^4.5.4",
     "url": "^0.11.0",
     "vite": "^2.9.2",
-    "vue-tsc": "^0.29.8",
-    "@release-it/conventional-changelog": "^5.0.0",
-    "release-it": "^15.0.0"
+    "vitepress": "^0.22.4",
+    "vue-tsc": "^0.29.8"
   }
 }
