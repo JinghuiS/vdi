@@ -14,6 +14,7 @@ export async function createModule(module: CreateModuleType) {
     const started = Date.now()
     const { declarations, providers, startupModules } = module
     const Root = createApp(declarations)
+
     const RootInject = new Injector([
         [VDI_CONFIG, { useValue: VdiConfig }],
         // injector vue instance
@@ -26,6 +27,7 @@ export async function createModule(module: CreateModuleType) {
     startupModules.map((item) => {
         injector.get(item)
     })
+    Root.config.globalProperties.$GLOBAL_INJECTOR = injector
     const appInit = injector.get(APP_INITIALIZER)
     const showInitLog = injector.get(VDI_CONFIG).showInitLog
     // init app

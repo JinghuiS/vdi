@@ -2,11 +2,11 @@
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import { onProvider, useDependency } from 'packages'
-import { useOverlay } from 'packages/common/components/overlay/useOverlay'
+
 import HelloWorld from './components/HelloWorld.vue'
 import { TestService } from './test.service'
 
-// onProvider([[TestService]])
+onProvider([[TestService]])
 const testService = useDependency(TestService, { self: true })
 
 function changeTest(a: any) {
@@ -19,7 +19,7 @@ function changeTest(a: any) {
     <button>修改</button>
     <img alt="Vue logo" src="./assets/logo.png" />
     <HelloWorld :msg="'1'" />
-    <router-view></router-view>
+    <!-- <router-view></router-view> -->
 </template>
 
 <style>

@@ -3,11 +3,17 @@ import { getCurrentInstance, inject, onUnmounted, provide } from 'vue'
 import { VUE_INJECTOR_KEY } from './moduleToken'
 
 export function useInjector(selfInject: boolean = false): Injector {
-    if (selfInject) {
-        const instance = getCurrentInstance()
+    const instance = getCurrentInstance()
 
+    if (selfInject) {
         //@ts-ignore
         return instance!.provides[VUE_INJECTOR_KEY]
+    }
+    if (!instance?.appContext.config.globalProperties.$GLOBAL_INJECTOR) {
+        const _injector = new Injector()
+        instance!.appContext.config.globalProperties.$GLOBAL_INJECTOR =
+            _injector
+        return _injector
     }
     const injector = inject<Injector>(VUE_INJECTOR_KEY)
     if (!injector) {
