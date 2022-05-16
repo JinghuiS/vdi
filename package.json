@@ -1,7 +1,7 @@
 {
   "name": "vdi",
   "private": false,
-  "version": "0.2.1",
+  "version": "0.2.2",
   "main": "dist/vdi.cjs.js",
   "module": "dist/vdi.es.js",
   "types": "dist/types/index.d.ts",
@@ -60,7 +60,6 @@
     "vue": "^3.2.25",
     "vue-router": "^4.0.15"
   },
-
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.3.1",
     "rimraf": "^3.0.2",
