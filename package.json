@@ -18,11 +18,11 @@
   "author": "Jinghui_S",
   "description": "vue3 Dependency injection And some small functions",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "vite build && rimraf types && tsc --build tsconfig-build.json",
     "preview": "vite preview",
     "release": "pnpm build && npx release-it",
-    "docs:dev": "vitepress dev docs",
+    "docs:dev": "vitepress dev docs --host",
     "docs:build": "vitepress build docs",
     "docs:serve": "vitepress serve docs"
   },
@@ -66,6 +66,7 @@
   "devDependencies": {
     "@release-it/conventional-changelog": "^5.0.0",
     "@vitejs/plugin-vue": "^2.3.1",
+    "prism-theme-vars": "^0.2.2",
     "release-it": "^15.0.0",
     "rimraf": "^3.0.2",
     "typescript": "^4.5.4",

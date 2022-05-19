@@ -10,7 +10,7 @@ const emit = defineEmits(['click'])
 /**提供 */
 onProvider([[TestService]])
 
-const testService = useDependency(TestService, { self: true })
+const testService = useDependency(TestService)
 const FatherTestService = useDependency(TestService)
 
 function change() {
@@ -23,7 +23,7 @@ const count = ref(0)
 
 <template>
     <button @click="change">
-        {{ msg }}
+        {{ testService.Test }}
     </button>
 </template>
 

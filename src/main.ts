@@ -1,31 +1,42 @@
-// import { Inject } from '@wendellhu/redi'
-// import {
-//     APP_INITIALIZER,
-//     APP_INITIALIZER_TYPE,
-//     createModule,
-//     vueModule
-// } from 'packages'
-// import { CommonModule } from 'packages/common'
-// import { AppRouteingModule } from './app.routeing'
+import { Inject } from '@wendellhu/redi'
+import {
+    APP_INITIALIZER,
+    APP_INITIALIZER_TYPE,
+    createModule,
+    vueModule
+} from 'packages'
+import { CommonModule, DIRECTIVE, DirectiveImplements } from 'packages/common'
+import { DirectiveBinding, VNode } from 'vue'
+import { AppRouteingModule } from './app.routeing'
 import App from './App.vue'
-// import { TestService } from './test.service'
+import { TestService } from './test.service'
 
-// class Test implements APP_INITIALIZER_TYPE {
-//     constructor(@Inject(TestService) public TestService: TestService) {}
-//     async startup() {
-//         this.TestService.Test.value = 'test'
-//     }
-// }
+class Test implements APP_INITIALIZER_TYPE {
+    constructor(@Inject(TestService) public TestService: TestService) {}
+    async startup() {
+        this.TestService.Test.value = 'test'
+    }
+}
+class TestD implements DirectiveImplements {
+    name = 'test'
+    constructor(@Inject(TestService) public TestService: TestService) {
+        console.log(this.TestService)
+    }
+    created() {
+        console.log(this.TestService)
+    }
+}
 
-// const AppModule = vueModule({
-//     declarations: App,
-//     imports: [CommonModule, AppRouteingModule],
-//     providers: [[TestService], [APP_INITIALIZER, { useClass: Test }]]
-// })
+const AppModule = vueModule({
+    declarations: App,
+    imports: [CommonModule, AppRouteingModule],
+    providers: [
+        [TestService],
+        [APP_INITIALIZER, { useClass: Test }],
+        [DIRECTIVE, { useClass: TestD }]
+    ]
+})
 
-// createModule(AppModule).then((app) => {
-//     app.mount('#app')
-// })
-import { createApp } from 'vue'
-
-createApp(App).mount('#app')
+createModule(AppModule).then((app) => {
+    app.mount('#app')
+})

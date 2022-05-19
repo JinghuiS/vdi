@@ -1,0 +1,113 @@
+/* https://github.com/antfu/prism-theme-vars */
+@import 'prism-theme-vars/base.css';
+@import "prism-theme-vars/themes/vitesse-light.css";
+:root {
+  --prism-font-family: var(--font-family-mono);
+  --prism-font-size: 0.85rem;
+  --prism-marker-opacity: 0;
+}
+
+html:not(.dark) {
+    --prism-foreground: #393a34;
+    --prism-background: #edf2f7;
+    --prism-comment: #a0ada0;
+    --prism-string: #00a870;
+    --prism-literal: #2f8a89;
+    --prism-keyword: #0052d9;
+    --prism-function: #c9353f;
+    --prism-deleted: #a14f55;
+    --prism-class: #c9353f;
+    --prism-builtin: #c9353f;
+    --prism-property: #ed7b2f;
+    --prism-namespace: #b05a78;
+    --prism-punctuation: #8e8f8b;
+    --prism-decorator: #bd8f8f;
+    --prism-number: #296aa3;
+    --prism-boolean: #1c6b48;
+    --prism-constant: #ed7b2f;
+    --prism-regex: #ed7b2f;
+    --prism-json-property: #698c96
+
+}
+
+html.dark {
+  --prism-scheme: dark;
+  --prism-foreground: #fff;
+  --prism-background: rgb(45,55,72);
+  --prism-comment: #a0ada0;
+  --prism-string: #00a870;
+  --prism-literal: #2f8a89;
+  --prism-keyword: #0052d9;
+  --prism-function: #c9353f;
+  --prism-deleted: #a14f55;
+  --prism-class: #c9353f;
+  --prism-builtin: #ab5959;
+  --prism-property: #b58451;
+  --prism-namespace: #b05a78;
+  --prism-punctuation: #8e8f8b;
+  --prism-decorator: #bd8f8f;
+  --prism-number: #296aa3;
+  --prism-boolean: #1c6b48;
+  --prism-constant: #a65e2b;
+  --prism-regex: #ab5e3f;
+  --prism-json-property: #698c96
+}
+
+
+.token.title {
+  color: var(--prism-keyword);
+}
+
+/* Overrdes */
+
+
+
+:not(pre) > code {
+  background: var(--prism-inline-background);
+  padding: 1px 6px;
+  border-radius: 3px;
+}
+
+a > code {
+  color: var(--c-brand-dark);
+}
+
+div[class*='language-'] {
+  position: relative;
+}
+
+div[class*='language-'] pre {
+  margin: 0;
+  z-index: 1;
+}
+
+div[class*='language-'] code {
+  font-size: var(--prism-font-size);
+  font-family: var(--prism-font-family);
+  color: var(--prism-foreground);
+}
+
+.token.important {
+  font-weight: normal;
+}
+
+/* Line highlighting */
+
+.highlight-lines {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  padding: var(--prism-block-padding-y) 0;
+  width: 100%;
+  line-height: var(--prism-line-height);
+  font-family: var(--prism-font-family);
+  font-size: var(--prism-font-size);
+  user-select: none;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.highlight-lines .highlighted {
+  background-color: var(--prism-line-highlight-background);
+}

@@ -4,6 +4,7 @@ specifiers:
   '@release-it/conventional-changelog': ^5.0.0
   '@vitejs/plugin-vue': ^2.3.1
   '@wendellhu/redi': ^0.5.0
+  prism-theme-vars: ^0.2.2
   release-it: ^15.0.0
   rimraf: ^3.0.2
   typescript: ^4.5.4
@@ -22,6 +23,7 @@ dependencies:
 devDependencies:
   '@release-it/conventional-changelog': 5.0.0_release-it@15.0.0
   '@vitejs/plugin-vue': 2.3.1_vite@2.9.5+vue@3.2.33
+  prism-theme-vars: 0.2.2
   release-it: 15.0.0
   rimraf: 3.0.2
   typescript: 4.6.3
@@ -3320,6 +3322,10 @@ packages:
   /prepend-http/2.0.0:
     resolution: {integrity: sha1-6SQ0v6XqjBn0HN/UAddBo8gZ2Jc=}
     engines: {node: '>=4'}
+    dev: true
+
+  /prism-theme-vars/0.2.2:
+    resolution: {integrity: sha512-EL9ifuU/F8tEldoCa2sspiiLWysCL54xDbf2gN/ubwdtbuJROqOGopG5kSwunapwaioT+jLUQ/Ky+7jnv62xJA==}
     dev: true
 
   /prismjs/1.28.0:

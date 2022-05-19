@@ -6,8 +6,8 @@ import { onProvider, useDependency } from 'packages'
 import HelloWorld from './components/HelloWorld.vue'
 import { TestService } from './test.service'
 
-onProvider([[TestService]])
-const testService = useDependency(TestService, { self: true })
+// onProvider([[TestService]])
+const testService = useDependency(TestService)
 
 function changeTest(a: any) {
     testService.Test.value = '父组件的2'
@@ -16,7 +16,7 @@ function changeTest(a: any) {
 
 <template>
     {{ testService.Test }}
-    <button>修改</button>
+    <button v-test @click="changeTest">修改</button>
     <img alt="Vue logo" src="./assets/logo.png" />
     <HelloWorld :msg="'1'" />
     <!-- <router-view></router-view> -->
