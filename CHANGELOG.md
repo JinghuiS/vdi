@@ -1,5 +1,12 @@
 
 
+# [0.3.0](https://github.com/JinghuiS/vdi/compare/v0.2.3...v0.3.0) (2022-05-19)
+
+
+### Features
+
+* 🎸 router/VDI_ROUTER ([dc1d36c](https://github.com/JinghuiS/vdi/commit/dc1d36ceb991165720077c60dc6da80e1ed1ecc4))
+
 ## [0.2.3](https://github.com/JinghuiS/vdi/compare/v0.2.2...v0.2.3) (2022-05-19)
 
 
