@@ -4,8 +4,19 @@
 
 ## 安装
 
-### npm `npm i vdi @wendellhu/redi `
+```bash
+$ npm install @wendellhu/redi vdi
+```
 
-### yarn `yarn add vdi @wendellhu/redi `
+## 功能
 
-### pnpm `pnpm add vdi @wendellhu/redi `
+---
+
+-   更好的依赖注入  
+    基于 `redi` 增强 vue3 依赖注入
+
+-   简单使用，非侵入  
+    最少两个 api 就可以完成强大的依赖注入
+
+-   vueModule 模式  
+    基于 Vdi 接管 vue 项目，把一些 vue api 变成依赖注入模式，提供更好的开发体验
