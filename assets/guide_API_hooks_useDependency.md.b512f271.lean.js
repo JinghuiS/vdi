@@ -1,0 +1,1 @@
+import{_ as n,c as s,o as a,a as t}from"./app.ee7fdc4e.js";const v='{"title":"useDependency","description":"","frontmatter":{},"headers":[],"relativePath":"guide/API/hooks/useDependency.md"}',p={},e=t("",3),o=[e];function c(l,u,k,i,r,d){return a(),s("div",null,o)}var m=n(p,[["render",c]]);export{v as __pageData,m as default};

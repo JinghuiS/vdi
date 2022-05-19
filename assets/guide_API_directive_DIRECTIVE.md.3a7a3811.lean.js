@@ -1,0 +1,1 @@
+import{_ as n,c as s,o as a,a as p}from"./app.ee7fdc4e.js";const g='{"title":"DIRECTIVE","description":"","frontmatter":{},"headers":[],"relativePath":"guide/API/directive/DIRECTIVE.md"}',t={},o=p("",3),e=[o];function c(l,i,r,u,k,d){return a(),s("div",null,e)}var y=n(t,[["render",c]]);export{g as __pageData,y as default};

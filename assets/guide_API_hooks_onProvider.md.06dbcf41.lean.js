@@ -1,0 +1,1 @@
+import{_ as n,c as s,o as a,a as t}from"./app.ee7fdc4e.js";const v='{"title":"onProvider","description":"","frontmatter":{},"headers":[],"relativePath":"guide/API/hooks/onProvider.md"}',p={},o=t("",3),e=[o];function c(u,l,k,i,r,d){return a(),s("div",null,e)}var m=n(p,[["render",c]]);export{v as __pageData,m as default};

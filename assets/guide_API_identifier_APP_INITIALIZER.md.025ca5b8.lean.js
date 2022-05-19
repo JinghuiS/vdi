@@ -1,0 +1,1 @@
+import{_ as n,c as s,o as a,a as t}from"./app.ee7fdc4e.js";const _='{"title":"APP_INITIALIZER","description":"","frontmatter":{},"headers":[],"relativePath":"guide/API/identifier/APP_INITIALIZER.md"}',p={},o=t("",3),e=[o];function c(l,u,i,k,r,d){return a(),s("div",null,e)}var m=n(p,[["render",c]]);export{_ as __pageData,m as default};

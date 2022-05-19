@@ -1,0 +1,1 @@
+import{_ as n,c as s,o as a,a as t}from"./app.ee7fdc4e.js";const f='{"title":"VdiRouterModule","description":"","frontmatter":{},"headers":[],"relativePath":"guide/API/router/VdiRouterModule.md"}',o={},e=t("",3),p=[e];function c(u,r,l,i,k,d){return a(),s("div",null,p)}var h=n(o,[["render",c]]);export{f as __pageData,h as default};

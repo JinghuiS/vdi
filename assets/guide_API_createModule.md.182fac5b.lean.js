@@ -1,0 +1,1 @@
+import{_ as n,c as a,o as s,a as e}from"./app.ee7fdc4e.js";const m='{"title":"createModule","description":"","frontmatter":{},"headers":[],"relativePath":"guide/API/createModule.md"}',t={},p=e("",3),o=[p];function c(u,l,r,i,d,k){return s(),a("div",null,o)}var v=n(t,[["render",c]]);export{m as __pageData,v as default};

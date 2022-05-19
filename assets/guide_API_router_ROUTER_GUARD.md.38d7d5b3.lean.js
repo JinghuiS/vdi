@@ -1,0 +1,1 @@
+import{_ as n,c as s,o as a,a as t}from"./app.ee7fdc4e.js";const m='{"title":"ROUTER_GUARD","description":"","frontmatter":{},"headers":[],"relativePath":"guide/API/router/ROUTER_GUARD.md"}',o={},p=t("",3),e=[p];function c(l,r,u,i,k,d){return a(),s("div",null,e)}var f=n(o,[["render",c]]);export{m as __pageData,f as default};

@@ -1,0 +1,1 @@
+import{_ as n,c as s,o as a,a as e}from"./app.ee7fdc4e.js";const M='{"title":"vueModule","description":"","frontmatter":{},"headers":[],"relativePath":"guide/API/vueModule.md"}',o={},p=e("",3),t=[p];function l(u,r,c,i,d,k){return a(),s("div",null,t)}var _=n(o,[["render",l]]);export{M as __pageData,_ as default};
