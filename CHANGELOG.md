@@ -1,5 +1,12 @@
 
 
+## [0.2.3](https://github.com/JinghuiS/vdi/compare/v0.2.2...v0.2.3) (2022-05-19)
+
+
+### Bug Fixes
+
+* 🐛 module ([b843b32](https://github.com/JinghuiS/vdi/commit/b843b3228152ef18bfd67764956f1c5ffb886de0))
+
 ## [0.2.2](https://github.com/JinghuiS/vdi/compare/0.2.1...v0.2.2) (2022-05-16)
 
 
