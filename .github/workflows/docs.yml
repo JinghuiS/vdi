@@ -2,7 +2,7 @@ name: 文档发布到github pages
 on:
     push:
         branches:
-            - master
+            - main
 jobs:
     build-and-deploy:
         runs-on: ubuntu-latest
