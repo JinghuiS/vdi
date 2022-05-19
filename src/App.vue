@@ -19,7 +19,7 @@ function changeTest(a: any) {
     <button v-test @click="changeTest">修改</button>
     <img alt="Vue logo" src="./assets/logo.png" />
     <HelloWorld :msg="'1'" />
-    <!-- <router-view></router-view> -->
+    <router-view></router-view>
 </template>
 
 <style>

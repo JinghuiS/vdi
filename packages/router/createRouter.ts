@@ -1,13 +1,14 @@
-import { Inject } from '@wendellhu/redi'
+import { Inject, Injector } from '@wendellhu/redi'
 import { App } from 'vue'
 import { createRouter } from 'vue-router'
-import { VUE_APP } from '../module'
+import { useInjector, VUE_APP } from '../module'
 import { CreateRouterGuard } from './routerGuard'
-import { ROUTER_CONFIG } from './routerToken'
+import { ROUTER_CONFIG, VDI_ROUTER } from './routerToken'
 import { VdiVueRouterOptions } from './type'
 import { scannerRoutes } from './scannerRoutes'
 export class VdiVueRouter {
     constructor(
+        @Inject(VUE_APP) public VUE_APP: App,
         @Inject(ROUTER_CONFIG) public _routerConfig: VdiVueRouterOptions,
         @Inject(VUE_APP) public vue: App,
         @Inject(CreateRouterGuard) private CreateRouterGuard: CreateRouterGuard
@@ -18,8 +19,13 @@ export class VdiVueRouter {
             ...routerConfig,
             routes
         })
-        this.CreateRouterGuard.register(appRouter)
+        const injector: Injector =
+            this.VUE_APP.config.globalProperties.$GLOBAL_INJECTOR
 
+        this.CreateRouterGuard.register(appRouter)
+        injector.add(VDI_ROUTER, {
+            useValue: appRouter
+        })
         this.vue.use(appRouter)
     }
 }

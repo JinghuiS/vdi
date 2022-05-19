@@ -11,6 +11,7 @@ Vdi 依赖于[redi](https://redi.wendell.fun/)，它是一个基于 vue3 的依�
 -   Vdi 只能在 vue3 中使用
 -   如果不了解依赖注入模式可能会对这个插件有一定的困惑，可以先去阅读 [redi 的博客](https://redi.wendell.fun/blogs/di)
 -   为什么不是[injection-js](https://github.com/mgechev/injection-js),因为 injection-js 依赖于 ts 元数据，需要安装`reflect-metadata`,而且继承的父类中的依赖不会被查找出来，需要在 class 中手动注入
+-   文档因为我的个人能力有些很可能云里雾里，不如直接使用[启动模板看看](https://github.com/JinghuiS/vdi-template)
 
 ## 安装
 

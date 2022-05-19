@@ -20,6 +20,8 @@ $ npm install @wendellhu/redi vdi
 
 <div class="main-quick" ><a href="/guide/quick-start" >快速开始</a></div>
 
+<a href="https://github.com/JinghuiS/vdi-template">完整模板</a>
+
 # 功能
 
 ---

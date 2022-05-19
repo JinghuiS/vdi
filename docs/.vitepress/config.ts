@@ -1,7 +1,7 @@
 import type { UserConfig } from 'vitepress'
 
 const config: UserConfig = {
-    base: '/Vdi/',
+    base: '/',
     title: 'Vdi',
     description: '简单的vue 依赖注入',
     markdown: {
@@ -15,8 +15,8 @@ const config: UserConfig = {
                 activeMatch: '^/guide/'
             },
             {
-                text: 'DEMO',
-                link: 'https://stackblitz.com/edit/vite-y7m4fy?file=main.tsx'
+                text: '快速启动模板',
+                link: 'https://github.com/JinghuiS/vdi-template'
             },
             {
                 text: 'Github',
@@ -69,6 +69,10 @@ const config: UserConfig = {
                                 {
                                     text: 'ROUTER_GUARD',
                                     link: '/guide/API/router/ROUTER_GUARD'
+                                },
+                                {
+                                    text: 'VDI_ROUTER',
+                                    link: 'guide/API/router/VDI_ROUTER'
                                 }
                             ]
                         },

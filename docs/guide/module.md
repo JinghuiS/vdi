@@ -3,6 +3,8 @@ Vdi 提供了一些功能和约束写法，但是需要 Vdi 来接管 vue 实例
 -   使用`vueModule`声明模块
 -   使用`createModule`创建 vue 实例并创建 vueModule，挂载 dom
 
+或者直接跳过教程使用[完整模板](https://github.com/JinghuiS/vdi-template)
+
 ## 声明 vueModule
 
 首先引入 vueModule,声明 module，并传入组件

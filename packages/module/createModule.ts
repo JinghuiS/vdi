@@ -24,10 +24,11 @@ export async function createModule(module: CreateModuleType) {
         [VDI_LOG, { useClass: LogService }]
     ])
     const injector = RootInject.createChild(providers)
+    Root.config.globalProperties.$GLOBAL_INJECTOR = injector
     startupModules.map((item) => {
         injector.get(item)
     })
-    Root.config.globalProperties.$GLOBAL_INJECTOR = injector
+
     const appInit = injector.get(APP_INITIALIZER)
     const showInitLog = injector.get(VDI_CONFIG).showInitLog
     // init app
