@@ -31,7 +31,7 @@
     </template>
     ```
 
-    获取自身依赖，需要配合[onProvider]('/guide/API/hooks/onProvider'),并且 useDependency self 为 true
+    获取自身依赖，需要配合[onProvider](/guide/API/hooks/onProvider),并且 useDependency self 为 true
 
     ```vue
     <!--Child.vue -->

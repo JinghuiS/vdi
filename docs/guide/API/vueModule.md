@@ -14,7 +14,7 @@
 
 -   Details
 
-    -   declarations: vueModule 要挂载的组件,主要作用在[createModule]('/guide/API/createModule')中
+    -   declarations: vueModule 要挂载的组件,主要作用在[createModule](/guide/API/createModule)中
         -   当组件被销毁时，会自动销毁对应的服务
     -   providers: vueModule 中的依赖注入
         -   有各种格式的依赖项，通过[redi](https://redi.wendell.fun/docs/item)文档查看

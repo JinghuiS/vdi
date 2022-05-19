@@ -10,8 +10,6 @@ $ npm install @wendellhu/redi vdi
 
 ## 功能
 
----
-
 -   更好的依赖注入  
     基于 `redi` 增强 vue3 依赖注入
 
