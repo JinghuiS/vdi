@@ -94,12 +94,12 @@ import { CountService } from './count.service'
 onProvider([[CountService]])
 
 //获取提供的依赖，self为true时候获取的是当前组件的依赖
-const CountService = useDependency(CountService, { self: true })
+const countService = useDependency(CountService, { self: true })
 </script>
 
 <template>
-    {{ CountService.count }}
-    <button @click="CountService.inc">修改</button>
+    {{ countService.count }}
+    <button @click="countService.inc">修改</button>
 </template>
 ```
 
@@ -120,12 +120,12 @@ import { CountService } from './count.service'
 onProvider([[CountService]])
 
 //因为是从该组件注入，所以需要self来获取自身依赖
-const CountService = useDependency(CountService, { self: true })
+const countService = useDependency(CountService, { self: true })
 </script>
 
 <template>
-    父组件： {{ CountService.count }}
-    <button @click="CountService.inc">count+</button>
+    父组件： {{ countService.count }}
+    <button @click="countService.inc">count+</button>
 </template>
 ```
 
@@ -139,13 +139,13 @@ import { onProvider, useDependency } from 'vdi'
 import { CountService } from './count.service'
 
 //获取提供的依赖，不需要使用self，因为父组件已经注入了依赖
-const CountService = useDependency(CountService)
+const countService = useDependency(CountService)
 </script>
 
 <template>
     <div class="child">
-        子组件： {{ CountService.count }}
-        <button @click="CountService.inc">count+</button>
+        子组件： {{ countService.count }}
+        <button @click="countService.inc">count+</button>
     </div>
 </template>
 ```

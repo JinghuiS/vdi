@@ -22,12 +22,12 @@
     import { CountService } from './count.service'
 
     //因为是从该组件注入，所以需要self来获取自身依赖
-    const CountService = useDependency(CountService)
+    const countService = useDependency(CountService)
     </script>
 
     <template>
-        父组件依赖： {{ CountService.count }}
-        <button @click="CountService.inc">count+</button>
+        父组件依赖： {{ countService.count }}
+        <button @click="countService.inc">count+</button>
     </template>
     ```
 

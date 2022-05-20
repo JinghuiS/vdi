@@ -38,12 +38,12 @@
     onProvider([[CountService]])
 
     //因为是从该组件注入，所以需要self来获取自身依赖
-    const CountService = useDependency(CountService, { self: true })
+    const countService = useDependency(CountService, { self: true })
     </script>
 
     <template>
-        父组件： {{ CountService.count }}
-        <button @click="CountService.inc">count+</button>
+        父组件： {{ countService.count }}
+        <button @click="countService.inc">count+</button>
     </template>
     ```
 
@@ -57,15 +57,15 @@
 
     onProvider([[CountService]])
     //获取提供的依赖，不需要使用 self，因为父组件已经注入了依赖
-    const CountService = useDependency(CountService)
+    const countService = useDependency(CountService)
     //获取本身的依赖，虽然跟父组件是同一个，但是因为是自身重新注入的值也是不一样的
     const ChildCountService = useDependency(CountService, { self: true })
     </script>
 
     <template>
         <div class="child">
-            子组件父值： {{ CountService.count }}
-            <button @click="CountService.inc">count+</button>
+            子组件父值： {{ countService.count }}
+            <button @click="countService.inc">count+</button>
 
             子组件自身值： {{ ChildCountService.count }}
             <button @click="ChildCountService.inc">count+</button>
