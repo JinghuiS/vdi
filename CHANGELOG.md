@@ -1,5 +1,12 @@
 
 
+## [0.3.3](https://github.com/JinghuiS/vdi/compare/v0.3.2...v0.3.3) (2022-05-20)
+
+
+### Bug Fixes
+
+* 🐛 router/guard ([723cc16](https://github.com/JinghuiS/vdi/commit/723cc1650776e07ce5db8d2aeea87f8c760a7bd9))
+
 ## [0.3.2](https://github.com/JinghuiS/vdi/compare/v0.3.1...v0.3.2) (2022-05-20)
 
 
