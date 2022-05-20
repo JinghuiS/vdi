@@ -1,8 +1,9 @@
 import { Injector } from '@wendellhu/redi'
-import { VUE_INJECTOR_KEY } from '../../../module'
+import { onProvider, VUE_INJECTOR_KEY } from '../../../module'
 import {
     Component,
     ComputedOptions,
+    createApp,
     createVNode,
     defineComponent,
     h,
@@ -41,7 +42,16 @@ export class OverlayService {
 
     private createdOverlay() {
         const vm = defineComponent(() => {
-            provide(VUE_INJECTOR_KEY, this.injector)
+            onProvider([
+                [
+                    OverLayChildRef,
+                    {
+                        useValue: {
+                            close: this.close.bind(this)
+                        }
+                    }
+                ]
+            ])
 
             return () =>
                 h(
@@ -60,8 +70,11 @@ export class OverlayService {
                     }
                 )
         })
+
         if (this.overlayElement) {
-            render(createVNode(vm), this.overlayElement)
+            createApp(vm)
+                .provide(VUE_INJECTOR_KEY, this.injector)
+                .mount(this.overlayElement)
         }
     }
 
@@ -75,12 +88,6 @@ export class OverlayService {
         return new Promise((resolve, reject) => {
             this._resolve = resolve
             this._reject = reject
-            this.injector.add(OverLayChildRef(), {
-                useValue: {
-                    close: this.close.bind(this),
-                    ...overlay
-                }
-            })
             this.createdOverlay()
             this.show.value = true
         })

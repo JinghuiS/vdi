@@ -4,9 +4,9 @@
 
 -   Type
     ```ts
-    interface OverlayChildRef<T> extends OverlayType {
-        params?: T
+    interface OverlayChildRef extends OverlayType {
+        params?: any
         close: (msg?: any) => void
     }
-    function useOverlayRef<T = {}>(): OverlayChildRef
+    function useOverlayRef(): OverlayChildRef
     ```

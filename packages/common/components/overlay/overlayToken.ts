@@ -1,11 +1,11 @@
 import { createIdentifier } from '@wendellhu/redi'
-import { OverlayType } from './type'
+import type { OverlayType } from './type'
 
-export interface OverlayChildRef<T> extends OverlayType {
+export interface OverlayChildRef<T = any> extends OverlayType {
     params?: T
     close: (msg?: any) => void
 }
 
-export function OverLayChildRef<T = any>() {
-    return createIdentifier<OverlayChildRef<T>>('OverLayChildRef____Token')
-}
+export const OverLayChildRef = createIdentifier<OverlayChildRef>(
+    'OverLayChildRef____Token'
+)

@@ -28,6 +28,6 @@ export function useOverlay(overlayChild: any) {
 }
 
 export function useOverlayRef<T = {}>() {
-    const overlayService = useDependency(OverLayChildRef<T>())
+    const overlayService = useDependency(OverLayChildRef)
     return overlayService
 }
