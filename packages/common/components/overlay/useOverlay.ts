@@ -19,6 +19,7 @@ export function useOverlay(overlayChild: any) {
         overlayService.overlayElement = null
         childInjector.dispose()
     })
+
     return {
         open: overlayService.open.bind(overlayService),
         show: overlayService.show,
@@ -26,7 +27,7 @@ export function useOverlay(overlayChild: any) {
     }
 }
 
-export function useOverlayRef() {
-    const overlayService = useDependency(OverLayChildRef)
+export function useOverlayRef<T = {}>() {
+    const overlayService = useDependency(OverLayChildRef<T>())
     return overlayService
 }

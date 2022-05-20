@@ -56,6 +56,19 @@ const config: UserConfig = {
                                 {
                                     text: 'useDependency',
                                     link: '/guide/API/hooks/useDependency'
+                                },
+                                {
+                                    text: 'overlay',
+                                    children: [
+                                        {
+                                            text: 'useOverlay',
+                                            link: '/guide/API/hooks/overlay/useOverlay'
+                                        },
+                                        {
+                                            text: 'useOverlayRef',
+                                            link: '/guide/API/hooks/overlay/useOverlayRef'
+                                        }
+                                    ]
                                 }
                             ]
                         },
