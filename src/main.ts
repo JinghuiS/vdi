@@ -3,12 +3,18 @@ import {
     APP_INITIALIZER,
     APP_INITIALIZER_TYPE,
     createModule,
+    RouterGuardImplements,
+    ROUTER_GUARD,
     VDI_ROUTER,
     vueModule
 } from 'packages'
 import { CommonModule, DIRECTIVE, DirectiveImplements } from 'packages/common'
 import { DirectiveBinding, VNode } from 'vue'
-import { Router } from 'vue-router'
+import {
+    NavigationGuardNext,
+    RouteLocationNormalized,
+    Router
+} from 'vue-router'
 import { AppRouteingModule } from './app.routeing'
 import App from './App.vue'
 import { TestService } from './test.service'
@@ -33,13 +39,26 @@ class TestD implements DirectiveImplements {
     }
 }
 
+class TestRD implements RouterGuardImplements {
+    constructor(@Inject(TestService) public TestService: TestService) {}
+    beforeEach(
+        to: RouteLocationNormalized,
+        from: RouteLocationNormalized,
+        next: NavigationGuardNext
+    ) {
+        console.log(this.TestService)
+        next()
+    }
+}
+
 const AppModule = vueModule({
     declarations: App,
     imports: [CommonModule, AppRouteingModule],
     providers: [
         [TestService],
         [APP_INITIALIZER, { useClass: Test }],
-        [DIRECTIVE, { useClass: TestD }]
+        [DIRECTIVE, { useClass: TestD }],
+        [ROUTER_GUARD, { useClass: TestRD }]
     ]
 })
 

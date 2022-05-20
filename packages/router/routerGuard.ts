@@ -10,9 +10,23 @@ export class CreateRouterGuard {
     ) {}
     register(router: Router) {
         this._guard.map((item: RouterGuardImplements) => {
-            item.beforeEach && router.beforeEach(item.beforeEach)
-            item.afterEach && router.afterEach(item.afterEach)
-            item.beforeResolve && router.beforeResolve(item.beforeResolve)
+            if (item.beforeEach) {
+                router.beforeEach((...args) => {
+                    item.beforeEach && item.beforeEach(...args)
+                })
+            }
+
+            if (item.afterEach) {
+                router.afterEach((...args) => {
+                    item.afterEach && item.afterEach(...args)
+                })
+            }
+
+            if (item.beforeResolve) {
+                router.beforeResolve((...args) => {
+                    item.beforeResolve && item.beforeResolve(...args)
+                })
+            }
         })
     }
 }
