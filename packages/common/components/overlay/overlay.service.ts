@@ -47,6 +47,7 @@ export class OverlayService {
                     OverLayChildRef,
                     {
                         useValue: {
+                            params: this.params,
                             close: this.close.bind(this)
                         }
                     }
