@@ -85,7 +85,7 @@ const config: UserConfig = {
                                 },
                                 {
                                     text: 'VDI_ROUTER',
-                                    link: 'guide/API/router/VDI_ROUTER'
+                                    link: '/guide/API/router/VDI_ROUTER'
                                 }
                             ]
                         },

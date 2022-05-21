@@ -9,7 +9,7 @@
 >
 > -   在使用自定义指令时不需要引入`DirectiveModule`，引入`CommonModule`即可，我们以后会把常用的 vue 功能都放在这个 module 中
 >
-> -   推荐把全局功能单独放在一个 CodeModule 中，再在根 module 中引入这样更便于管理，大致目录例子如下:
+> -   推荐把全局功能单独放在一个 CoreModule 中，再在根 module 中引入这样更便于管理，大致目录例子如下:
 >     ```
 >         ├── core
 >         │   ├── routerGuard
