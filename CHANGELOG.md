@@ -1,5 +1,12 @@
 
 
+## [0.3.4](https://github.com/JinghuiS/vdi/compare/v0.3.3...v0.3.4) (2022-05-21)
+
+
+### Bug Fixes
+
+* 🐛 overlay useOverlayRef ([a8acca7](https://github.com/JinghuiS/vdi/commit/a8acca779acc897f1fb89adcd69500e36af9f116))
+
 ## [0.3.3](https://github.com/JinghuiS/vdi/compare/v0.3.2...v0.3.3) (2022-05-20)
 
 
