@@ -73,7 +73,7 @@
     import { DirectiveImplements } from 'vdi'
 
     export class TestDirective implements DirectiveImplements {
-        name: string = Null_Directive_Name
+        name: string = 'test'
         mounted(
             el: any,
             binding: DirectiveBinding<any>,

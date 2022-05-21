@@ -63,7 +63,7 @@ const countService = useDependency(CountService, { self: true })
 
 在子组件使用
 
-```vue{8}
+```vue
 <!--Child.vue -->
 <script setup lang="ts">
 import { onProvider, useDependency } from 'vdi'
