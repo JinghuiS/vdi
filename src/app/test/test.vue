@@ -5,7 +5,6 @@
 
 <script setup lang="ts">
 import { TestService } from '@/test.service'
-import { useOverlayRef } from 'packages/common/components/overlay/useOverlay'
 import { useDependency } from 'packages/module'
 
 // const dialogRef = useOverlayRef()

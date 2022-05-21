@@ -4,12 +4,17 @@ import { VUE_INJECTOR_KEY } from './moduleToken'
 
 export function useInjector(selfInject: boolean = false): Injector {
     const instance = getCurrentInstance()
-
+    //@ts-ignore
+    const instanceInjector = instance!.provides[VUE_INJECTOR_KEY]
     if (selfInject) {
-        //@ts-ignore
-        return instance!.provides[VUE_INJECTOR_KEY]
+        return instanceInjector
     }
     if (!instance?.appContext.config.globalProperties.$GLOBAL_INJECTOR) {
+        if (instanceInjector) {
+            instance!.appContext.config.globalProperties.$GLOBAL_INJECTOR =
+                instanceInjector
+            return instanceInjector
+        }
         const _injector = new Injector()
         instance!.appContext.config.globalProperties.$GLOBAL_INJECTOR =
             _injector

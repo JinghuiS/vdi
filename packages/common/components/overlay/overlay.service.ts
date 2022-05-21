@@ -73,9 +73,14 @@ export class OverlayService {
         })
 
         if (this.overlayElement) {
-            createApp(vm)
-                .provide(VUE_INJECTOR_KEY, this.injector)
-                .mount(this.overlayElement)
+            const overlayInjector = createApp(vm).provide(
+                VUE_INJECTOR_KEY,
+                this.injector
+            )
+
+            overlayInjector.config.globalProperties.$GLOBAL_INJECTOR =
+                this.injector
+            overlayInjector.mount(this.overlayElement)
         }
     }
 
