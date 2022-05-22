@@ -10,13 +10,7 @@ export const AppRouteingModule = vueModule({
             routes: [
                 {
                     path: '/test',
-                    module: TestModule,
-                    children: [
-                        {
-                            path: '/test/a',
-                            component: () => import('./app/test/test.vue')
-                        }
-                    ]
+                    module: TestModule
                 }
             ]
         })

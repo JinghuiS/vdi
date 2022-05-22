@@ -2,7 +2,7 @@
 
 注入自定义指令的[识别符](https://redi.wendell.fun/docs/identifier)
 
--   type
+-   ### type
 
     ```ts
     const DIRECTIVE = createIdentifier<DirectiveImplements>('DIRECTIVE')
@@ -56,10 +56,11 @@
     }
     ```
 
--   Details  
+-   ### Details
+
     必须先在 vueModule 中引入[DirectiveModule](/guide/API/directive/DirectiveModule)或者 CommonModule，再注入 DIRECTIVE,
     可以注入多个  
-    name 属性是必须的，它会是指令的名称:
+     name 属性是必须的，它会是指令的名称:
 
     ```
     name= 'test'
@@ -67,7 +68,7 @@
     <div v-test ></div>
     ```
 
--   Example
+-   ### Example
 
     ```ts
     import { DirectiveImplements } from 'vdi'

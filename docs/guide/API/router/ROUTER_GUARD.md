@@ -2,7 +2,7 @@
 
 注入路由守卫的[识别符](https://redi.wendell.fun/docs/identifier)
 
--   type
+-   ### type
     ```ts
     const ROUTER_GUARD =
         createIdentifier<RouterGuardImplements[]>('ROUTER_GUARD')
@@ -26,11 +26,11 @@
         ) => boolean | Promise<any> | any
     }
     ```
--   Details
+-   ### Details
 
     -   ROUTER_GUARD 可以注入多个路由守卫，只要在在[VdiRouterModule](/guide/API/router/VdiRouterModule)注入的[vueModule](/guide/API/vueModule),多次注入 ROUTER_GUARD 即可
 
--   Example
+-   ### Example
 
     ```ts
     export class TestGuard implements RouterGuardImplements {

@@ -2,7 +2,7 @@
 
 在 vue 实例挂载之前执行 promise 的[识别符](https://redi.wendell.fun/docs/identifier)
 
--   type
+-   ### type
     ```ts
     const APP_INITIALIZER = createIdentifier<APP_INITIALIZER_TYPE>(
         'Application Initializer'
@@ -13,10 +13,11 @@
         startup: () => Promise<any>
     }
     ```
--   Details  
+-   ### Details
+
     当 APP_INITIALIZER 被传入根模块时，它会在 vue 实例挂载之前执行，并且等待 APP_INITIALIZER 运行完成才会继续执行
 
--   Example
+-   ### Example
 
     ```ts
     import { ref } from 'vue'

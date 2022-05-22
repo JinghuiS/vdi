@@ -2,17 +2,19 @@
 
 获取依赖
 
--   Type
+-   ### Type
     ```ts
     function useDependency<T>(
         provider: DependencyIdentifier<T>,
         options?: { self: boolean }
     ): T
     ```
--   Details  
+-   ### Details
+
     获取依赖并返回，如果没有 self 为 true，则会一直从组件树中向上寻找依赖
 
--   Example  
+-   ### Example
+
     获取上级的依赖
 
     ```vue

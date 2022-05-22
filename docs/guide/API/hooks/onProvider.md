@@ -2,21 +2,23 @@
 
 在组件中注入依赖
 
--   Type
+-   ### Type
 
     ```ts
     function onProvider(dependency: Dependency[]): void
     ```
 
--   Details  
+-   ### Details
+
     在当前组件中注入依赖
 
     -   **_注意在 onProvider 中注入后，当前组件下的子组件也会拿到依赖，如果需要拿到最初的依赖，请在需要的页面上使用 onProvider 重新注入，并且通过 useDependency self 为 true 获取依赖_**
 
     -   如果需要在使用 onProvider 注入依赖后的组件中拿到依赖也需要通过 useDependency self 为 true 获取依赖
 
--   Example  
-     注入后获取自身依赖例子
+-   ### Example
+
+    注入后获取自身依赖例子
 
     ```ts
     import { ref } from 'vue'

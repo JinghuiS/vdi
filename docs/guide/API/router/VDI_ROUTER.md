@@ -2,13 +2,13 @@
 
 获取当前 vue 实例中的 [router](https://router.vuejs.org/zh/api/#router-%E6%96%B9%E6%B3%95)
 
--   type
+-   ### Type
 
     ```ts
     const VDI_ROUTER = createIdentifier<Router>('VDI_ROUTER')
     ```
 
--   example
+-   ### Example
 
     ```ts
     import { Inject } from '@wendellhu/redi'

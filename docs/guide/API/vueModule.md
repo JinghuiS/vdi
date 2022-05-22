@@ -2,7 +2,7 @@
 
 声明一个 vueModule
 
--   Type
+-   ### Type
 
     ```ts
     function vueModule({
@@ -12,7 +12,7 @@
     }: ModuleType): CreateModuleType
     ```
 
--   Details
+-   ### Details
 
     -   declarations: vueModule 要挂载的组件,主要作用在[createModule](/guide/API/createModule)中
         -   当组件被销毁时，会自动销毁对应的服务
@@ -33,7 +33,7 @@
 
         -   vueModule 会解析 imports 中的 vueModule,并且将其中的 providers 和 imports 合并到当前 vueModule 中
 
--   Example
+-   ### Example
 
     ```ts
     import { vueModule } from 'vdi'

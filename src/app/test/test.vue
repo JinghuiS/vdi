@@ -1,5 +1,5 @@
 <template>
-    11 212121212
+    testVue
     {{ testService.Test }}
 </template>
 

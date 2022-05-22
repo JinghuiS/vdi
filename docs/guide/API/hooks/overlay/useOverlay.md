@@ -2,7 +2,7 @@
 
 一个简单帮助你快速使用组件库弹出层的 hook
 
--   Type
+-   ### Type
 
     ```ts
     function useOverlay(
@@ -27,7 +27,7 @@
      close: (msg?: any) => void
     ```
 
--   Details
+-   ### Details
 
     -   这个 hook 可以帮助你快速创建组件库弹出层服务，第一个参数为组件库的弹出层组件，不管是弹窗或者是抽屉，都可以使用这个 hook 创建 。
 
@@ -39,7 +39,8 @@
 
     -   可以查看这个[封装例子](https://github.com/JinghuiS/td-fast-forward/tree/main/src/app/shared/components/dialog)来查看如何使用，[配合使用例子](https://github.com/JinghuiS/td-fast-forward/tree/main/src/app/feature/componentList/overlayList)
 
--   Example  
+-   ### Example
+
     以 `element-plus` 的[dialog](https://element-plus.org/zh-CN/component/dialog.html#%E5%9F%BA%E7%A1%80%E7%94%A8%E6%B3%95)为例子
     首先因为 element-plus 的 dialog 处理展示隐藏的值不是 visible，所以需要先自定义组件
 
@@ -85,7 +86,7 @@
     ```
 
     最后在页面上使用  
-    弹出层中间的组件
+     弹出层中间的组件
 
     ```vue
     <!-- DialogChildView.vue -->
