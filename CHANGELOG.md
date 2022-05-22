@@ -1,5 +1,12 @@
 
 
+## [0.4.1](https://github.com/JinghuiS/vdi/compare/v0.4.0...v0.4.1) (2022-05-22)
+
+
+### Bug Fixes
+
+* 🐛 router child route  scanning error ([b1d407c](https://github.com/JinghuiS/vdi/commit/b1d407c1a473c190228b41f3ef5581c0f7477eb8))
+
 # [0.4.0](https://github.com/JinghuiS/vdi/compare/v0.3.4...v0.4.0) (2022-05-22)
 
 
