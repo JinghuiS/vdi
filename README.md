@@ -119,3 +119,7 @@ createModule(AppModule).then((vueInstance) => {
     vueInstance.mount('#app')
 })
 ```
+
+## License
+
+[MIT](https://github.com/JinghuiS/vdi/blob/main/LICENSE)
