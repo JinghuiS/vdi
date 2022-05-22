@@ -1,5 +1,17 @@
 
 
+# [0.4.0](https://github.com/JinghuiS/vdi/compare/v0.3.4...v0.4.0) (2022-05-22)
+
+
+### Bug Fixes
+
+* 🐛 onProvider find Injector / overlay repeat find Injector ([25addaf](https://github.com/JinghuiS/vdi/commit/25addaf9f552765d3801a173a5f5ed09c4a98ba5))
+
+
+### Features
+
+* 🎸 router add VdiRouterModule.forChild ([11068d4](https://github.com/JinghuiS/vdi/commit/11068d4c46d5e07a25f5cd82cb56286b823a1467))
+
 ## [0.3.4](https://github.com/JinghuiS/vdi/compare/v0.3.3...v0.3.4) (2022-05-21)
 
 
