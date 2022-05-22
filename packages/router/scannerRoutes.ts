@@ -28,7 +28,7 @@ function bindModule(module: any, component?: any) {
 
 export function scannerRoutes(routes: VdiRouterRaw[]) {
     return routes.map(({ module, children, component, ...route }) => {
-        const _route: any = { ...route }
+        const _route: any = { children: [], ...route }
         _route.component = component
         if (module) {
             const { component: emptyComponent } = bindModule(module, component)
