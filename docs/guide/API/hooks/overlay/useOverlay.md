@@ -57,7 +57,7 @@
     import type { DialogProps } from 'element-plus'
     const props = defineProps<{
         visible: boolean
-        options: TdDialogProps
+        options: DialogProps
     }>()
     </script>
     ```
