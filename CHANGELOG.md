@@ -1,5 +1,12 @@
 
 
+## [0.4.2](https://github.com/JinghuiS/vdi/compare/v0.4.1...v0.4.2) (2022-05-23)
+
+
+### Bug Fixes
+
+* 🐛 useOverlay 修复重复mount ([b405c63](https://github.com/JinghuiS/vdi/commit/b405c63e86416778a9e1b6a041ee9a72e92ddd20))
+
 ## [0.4.1](https://github.com/JinghuiS/vdi/compare/v0.4.0...v0.4.1) (2022-05-22)
 
 
