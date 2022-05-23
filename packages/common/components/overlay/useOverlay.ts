@@ -11,6 +11,7 @@ export function useOverlay(overlayChild: any) {
     overlayService.OverLayChildElement = overlayChild
 
     onUnmounted(() => {
+        overlayService.OverlayInstance?.unmount()
         if (overlayService.overlayElement?.parentNode) {
             overlayService.overlayElement.parentNode.removeChild(
                 overlayService.overlayElement

@@ -1,6 +1,7 @@
 import { Injector } from '@wendellhu/redi'
 import { onProvider, VUE_INJECTOR_KEY } from '../../../module'
 import {
+    App,
     Component,
     ComputedOptions,
     createApp,
@@ -40,6 +41,7 @@ export class OverlayService {
 
     public show = ref<boolean>(false)
 
+    public OverlayInstance?: App
     private createdOverlay() {
         const vm = defineComponent(() => {
             onProvider([
@@ -73,14 +75,14 @@ export class OverlayService {
         })
 
         if (this.overlayElement) {
-            const overlayInjector = createApp(vm).provide(
+            this.OverlayInstance = createApp(vm).provide(
                 VUE_INJECTOR_KEY,
                 this.injector
             )
 
-            overlayInjector.config.globalProperties.$GLOBAL_INJECTOR =
+            this.OverlayInstance.config.globalProperties.$GLOBAL_INJECTOR =
                 this.injector
-            overlayInjector.mount(this.overlayElement)
+            this.OverlayInstance.mount(this.overlayElement)
         }
     }
 
@@ -94,7 +96,9 @@ export class OverlayService {
         return new Promise((resolve, reject) => {
             this._resolve = resolve
             this._reject = reject
-            this.createdOverlay()
+            if (!this.OverlayInstance) {
+                this.createdOverlay()
+            }
             this.show.value = true
         })
     }
