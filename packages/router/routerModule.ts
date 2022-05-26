@@ -35,7 +35,7 @@ export class VdiRouterModule {
     static forChild(routes: VdiRouterRaw[]): ModuleWithProviders {
         return {
             providers: [],
-            vueModule: childBindRoutes(routes)(class Static_VdiRouterChild {})
+            vueModule: childBindRoutes(routes)(class _Static_VdiRouterChild_ {})
         }
     }
 }
