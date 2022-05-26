@@ -32,9 +32,10 @@ export function scannerRoutes(routes: VdiRouterRaw[]) {
         _route.component = component
         if (module) {
             const { component: emptyComponent } = bindModule(module, component)
-            const childRoutes = module.startupModules.find(
-                (item) => item.name === VdiRouterChildClassName
-            )
+            const childRoutes = module.startupModules.find((item, index) => {
+                module.startupModules.splice(index, 1)
+                return item.name === VdiRouterChildClassName
+            })
             if (childRoutes) {
                 _route.children = scannerRoutes(childRoutes.childRoutes)
             }

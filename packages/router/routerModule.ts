@@ -1,16 +1,16 @@
-import { ModuleWithProviders } from '../module'
+import type { ModuleWithProviders } from '../module'
 import { VdiVueRouter } from './createRouter'
 import { CreateRouterGuard, EmptyRouterGuard } from './routerGuard'
 import { ROUTER_CONFIG, ROUTER_GUARD } from './routerToken'
-import { VdiRouterRaw, VdiVueRouterOptions } from './type'
+import type { VdiRouterRaw, VdiVueRouterOptions } from './type'
 
 export const VdiRouterChildClassName = '_Static_VdiRouterChild_'
-export class _Static_VdiRouterChild_ {
-    static childRoutes: VdiRouterRaw[] = []
-}
+
 function childBindRoutes(childRoutes: VdiRouterRaw[]) {
-    _Static_VdiRouterChild_.childRoutes = childRoutes
-    return _Static_VdiRouterChild_
+    return function (target: any) {
+        target.childRoutes = childRoutes
+        return target
+    }
 }
 
 export class VdiRouterModule {
@@ -34,8 +34,8 @@ export class VdiRouterModule {
     }
     static forChild(routes: VdiRouterRaw[]): ModuleWithProviders {
         return {
-            providers: [[childBindRoutes(routes)]],
-            vueModule: _Static_VdiRouterChild_
+            providers: [],
+            vueModule: childBindRoutes(routes)(class Static_VdiRouterChild {})
         }
     }
 }
