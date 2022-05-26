@@ -1,5 +1,12 @@
 
 
+## [0.4.4](https://github.com/JinghuiS/vdi/compare/v0.4.3...v0.4.4) (2022-05-26)
+
+
+### Bug Fixes
+
+* 🐛 Fix the same problem as the previous version ([0b9d9bc](https://github.com/JinghuiS/vdi/commit/0b9d9bcacd3244ebc02b2e4b84f583da9fd38bdb))
+
 ## [0.4.3](https://github.com/JinghuiS/vdi/compare/v0.4.2...v0.4.3) (2022-05-26)
 
 
