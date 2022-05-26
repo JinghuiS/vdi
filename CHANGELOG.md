@@ -1,5 +1,12 @@
 
 
+## [0.4.3](https://github.com/JinghuiS/vdi/compare/v0.4.2...v0.4.3) (2022-05-26)
+
+
+### Bug Fixes
+
+* 🐛 router fix forchild has always been the last one ([e631b33](https://github.com/JinghuiS/vdi/commit/e631b3326070040d9618a3730ac264546ecd7879))
+
 ## [0.4.2](https://github.com/JinghuiS/vdi/compare/v0.4.1...v0.4.2) (2022-05-23)
 
 
