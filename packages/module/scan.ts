@@ -1,5 +1,9 @@
 import { Dependency, DependencyIdentifier } from '@wendellhu/redi'
-import { CreateModuleType, ModuleWithProviders } from './type'
+import {
+    CreateModuleType,
+    ModuleImportsType,
+    ModuleWithProviders
+} from './type'
 
 export class Scan {
     public providers: Dependency[] = []
@@ -17,7 +21,7 @@ export class Scan {
         }
     }
 
-    scanImports(module: ModuleWithProviders[] | CreateModuleType[]): void {
+    scanImports(module: ModuleImportsType): void {
         const imports = module
         const moduleProviders: Dependency[] = []
 
