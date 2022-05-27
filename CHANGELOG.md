@@ -1,5 +1,12 @@
 
 
+## [0.4.5](https://github.com/JinghuiS/vdi/compare/v0.4.4...v0.4.5) (2022-05-27)
+
+
+### Bug Fixes
+
+* 🐛 module imports type error ([7d42264](https://github.com/JinghuiS/vdi/commit/7d4226489a7a63163b2ced4565b80a90deb8ea56))
+
 ## [0.4.4](https://github.com/JinghuiS/vdi/compare/v0.4.3...v0.4.4) (2022-05-26)
 
 
