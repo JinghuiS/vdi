@@ -1,5 +1,12 @@
 
 
+## [0.4.6](https://github.com/JinghuiS/vdi/compare/v0.4.5...v0.4.6) (2022-05-28)
+
+
+### Bug Fixes
+
+* 🐛 overlay fix params always in the initial state ([ed2a3f8](https://github.com/JinghuiS/vdi/commit/ed2a3f8294e33d7ae0aa1264046a7123b59145e8))
+
 ## [0.4.5](https://github.com/JinghuiS/vdi/compare/v0.4.4...v0.4.5) (2022-05-27)
 
 
