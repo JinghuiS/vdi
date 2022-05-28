@@ -96,9 +96,7 @@ export class OverlayService {
         return new Promise((resolve, reject) => {
             this._resolve = resolve
             this._reject = reject
-            if (!this.OverlayInstance) {
-                this.createdOverlay()
-            }
+            this.createdOverlay()
             this.show.value = true
         })
     }
@@ -110,5 +108,7 @@ export class OverlayService {
         } else {
             this._resolve()
         }
+        this.OverlayInstance?.unmount()
+        this.OverlayInstance = undefined
     }
 }
