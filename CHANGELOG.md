@@ -1,5 +1,12 @@
 
 
+## [0.4.7](https://github.com/JinghuiS/vdi/compare/v0.4.6...v0.4.7) (2023-01-09)
+
+
+### Bug Fixes
+
+* 🐛 update redi version ([6d1dc8c](https://github.com/JinghuiS/vdi/commit/6d1dc8ca0016d4bd4ff4794ef2c5ad2b67caa674))
+
 ## [0.4.6](https://github.com/JinghuiS/vdi/compare/v0.4.5...v0.4.6) (2022-05-28)
 
 
