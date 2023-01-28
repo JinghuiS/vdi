@@ -1,6 +1,6 @@
 import { vueModule } from 'packages/module'
 import { VdiRouterModule } from 'packages/router/routerModule'
-import { createWebHashHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import { TestModule } from './app/test/test.module'
 
 export const AppRouteingModule = vueModule({
@@ -14,5 +14,15 @@ export const AppRouteingModule = vueModule({
                 }
             ]
         })
+    ]
+})
+
+export const AppRoutes = createRouter({
+    history: createWebHashHistory(),
+    routes: [
+        {
+            path: '/',
+            component: () => import('./app/test/test.vue')
+        }
     ]
 })

@@ -11,5 +11,4 @@ import { useDependency } from 'packages/module'
 // console.log(dialogRef)
 
 const testService = useDependency(TestService)
-console.log(testService)
 </script>

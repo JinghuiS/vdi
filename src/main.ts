@@ -15,7 +15,7 @@ import {
     RouteLocationNormalized,
     Router
 } from 'vue-router'
-import { AppRouteingModule } from './app.routeing'
+import { AppRouteingModule } from './app.routes'
 import App from './App.vue'
 import { TestService } from './test.service'
 
@@ -62,6 +62,8 @@ const AppModule = vueModule({
     ]
 })
 
-createModule(AppModule).then((app) => {
-    app.mount('#app')
-})
+// createModule(AppModule).then((app) => {
+//     app.mount('#app')
+// })
+
+import './noModuleMain'

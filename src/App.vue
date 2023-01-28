@@ -16,7 +16,7 @@ function changeTest(a: any) {
 
 <template>
     {{ testService.Test }}
-    <button v-test @click="changeTest">修改</button>
+    <button @click="changeTest">修改</button>
     <img alt="Vue logo" src="./assets/logo.png" />
     <HelloWorld :msg="'1'" />
     <router-view></router-view>

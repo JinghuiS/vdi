@@ -14,7 +14,7 @@ const testService = useDependency(TestService)
 const FatherTestService = useDependency(TestService)
 
 function change() {
-    // testService.Test.value = '2'
+    testService.Test.value = '2'
     emit('click', '5')
 }
 
