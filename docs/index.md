@@ -38,7 +38,5 @@ $ npm install @wendellhu/redi vdi
 -   简单使用，非侵入  
     最少两个 api 就可以完成强大的依赖注入
 
--   vueModule 模式  
-    基于 Vdi 接管 vue 项目，把一些 vue api 变成依赖注入模式，提供更好的开发体验
 
 </div>

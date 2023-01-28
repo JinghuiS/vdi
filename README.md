@@ -3,7 +3,6 @@
 一个简单的 vue di 插件，基于`@wendellhu/redi`实现
 
 -   [docs](https://vdi-docs.vercel.app/)
--   [Starter Template](https://github.com/JinghuiS/vdi-template)
 
 ## 安装
 
@@ -18,9 +17,6 @@ $ npm install @wendellhu/redi vdi
 
 -   简单使用，非侵入  
     最少两个 api 就可以完成强大的依赖注入
-
--   vueModule 模式  
-    基于 Vdi 接管 vue 项目，把一些 vue api 变成依赖注入模式，提供更好的开发体验
 
 ## 例子
 
@@ -80,44 +76,6 @@ const countService = useDependency(CountService)
         <button @click="countService.inc">count+</button>
     </div>
 </template>
-```
-
-### vueModule 模式
-
-```ts
-//App.Module.ts
-import { vueModule, CommonModule } from 'vdi'
-import App from './App.vue'
-
-import { CountService } from './count.service.ts'
-/**
- * 声明一个 vueModule
- * @param declarations 当前模块依赖注入的组件
- * @param imports 注入其他模块
- * @param providers 注入依赖
- */
-export const AppModule = vueModule({
-    declarations: App,
-    imports: [
-        // vdi提供的常用模块，如果需要使用vdi的依赖注入模式的自定义指令，需要在这里引入
-        CommonModule
-    ],
-    providers: [
-        // 在快速开始中我们声明了CountService这个服务
-        CountService
-    ]
-})
-```
-
-```ts
-//main.ts
-import { createModule } from 'vdi'
-import { AppModule } from './App.Module.ts'
-
-createModule(AppModule).then((vueInstance) => {
-    //挂载
-    vueInstance.mount('#app')
-})
 ```
 
 ## License
