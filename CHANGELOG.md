@@ -1,5 +1,12 @@
 
 
+# [0.5.0](https://github.com/JinghuiS/vdi/compare/v0.4.7...v0.5.0) (2023-01-28)
+
+
+### Features
+
+* 🎸 Add plugin ([b080d3e](https://github.com/JinghuiS/vdi/commit/b080d3ea6b81662d5d530abcf5dbbec66ecb8c38))
+
 ## [0.4.7](https://github.com/JinghuiS/vdi/compare/v0.4.6...v0.4.7) (2023-01-09)
 
 
