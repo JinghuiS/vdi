@@ -6,6 +6,7 @@ import { CreateRouterGuard } from './routerGuard'
 import { ROUTER_CONFIG, VDI_ROUTER } from './routerToken'
 import { VdiVueRouterOptions } from './type'
 import { scannerRoutes } from './scannerRoutes'
+/**@deprecated The  will be removed in next version. */
 export class VdiVueRouter {
     constructor(
         @Inject(VUE_APP) public VUE_APP: App,

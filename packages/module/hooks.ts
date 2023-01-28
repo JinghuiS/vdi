@@ -9,17 +9,18 @@ export function useInjector(selfInject: boolean = false): Injector {
     if (selfInject) {
         return instanceInjector
     }
-    if (!instance?.appContext.config.globalProperties.$GLOBAL_INJECTOR) {
-        if (instanceInjector) {
-            instance!.appContext.config.globalProperties.$GLOBAL_INJECTOR =
-                instanceInjector
-            return instanceInjector
-        }
-        const _injector = new Injector()
-        instance!.appContext.config.globalProperties.$GLOBAL_INJECTOR =
-            _injector
-        return _injector
-    }
+    // /**@deprecated The  will be removed in next version. */
+    // if (!instance?.appContext.config.globalProperties.$GLOBAL_INJECTOR) {
+    //     if (instanceInjector) {
+    //         instance!.appContext.config.globalProperties.$GLOBAL_INJECTOR =
+    //             instanceInjector
+    //         return instanceInjector
+    //     }
+    //     const _injector = new Injector()
+    //     instance!.appContext.config.globalProperties.$GLOBAL_INJECTOR =
+    //         _injector
+    //     return _injector
+    // }
     const injector = inject<Injector>(VUE_INJECTOR_KEY)
     if (!injector) {
         return new Injector()

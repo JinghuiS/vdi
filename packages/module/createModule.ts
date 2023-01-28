@@ -10,6 +10,8 @@ import {
 import { NoopStartupService } from './noopStartup.service'
 import { CreateModuleType } from './type'
 import { VdiConfig } from './config'
+
+/**@deprecated The  will be removed in next version. */
 export async function createModule(module: CreateModuleType) {
     const started = Date.now()
     const { declarations, providers, startupModules } = module

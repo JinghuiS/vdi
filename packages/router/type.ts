@@ -15,7 +15,7 @@ import {
     _RouteRecordBase
 } from 'vue-router'
 import { CreateModuleType } from '../module'
-
+/**@deprecated The  will be removed in next version. */
 export interface RouterGuardImplements {
     beforeResolve?: (
         to: RouteLocationNormalized,
@@ -33,7 +33,7 @@ export interface RouterGuardImplements {
         failure: void | NavigationFailure | undefined
     ) => boolean | Promise<any> | any
 }
-
+/**@deprecated The  will be removed in next version. */
 export interface VdiRouterRaw {
     /**
      * Path of the record. Should start with `/` unless the record is the child of
@@ -71,7 +71,7 @@ export interface VdiRouterRaw {
      */
     meta?: RouteMeta
 }
-
+/**@deprecated The  will be removed in next version. */
 export interface VdiVueRouterOptions extends PathParserOptions {
     /**
      * History implementation used by the router. Most web applications should use

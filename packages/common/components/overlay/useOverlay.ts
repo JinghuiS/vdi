@@ -4,6 +4,7 @@ import { OverlayService } from './overlay.service'
 import { onUnmounted } from 'vue'
 import { Injector } from '@wendellhu/redi'
 
+/**@deprecated The  will be removed in next version. Please use [vue-modal-provider](https://github.com/JinghuiS/vue-modal-provider) */
 export function useOverlay(overlayChild: any) {
     const inject = useInjector(true)
     const childInjector = new Injector([], inject)
@@ -26,7 +27,7 @@ export function useOverlay(overlayChild: any) {
         close: overlayService.close.bind(overlayService)
     }
 }
-
+/**@deprecated The  will be removed in next version. Please use [vue-modal-provider](https://github.com/JinghuiS/vue-modal-provider) */
 export function useOverlayRef<T = {}>() {
     const overlayService = useDependency(OverLayChildRef)
     return overlayService

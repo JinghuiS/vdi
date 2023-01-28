@@ -12,7 +12,7 @@ function childBindRoutes(childRoutes: VdiRouterRaw[]) {
         return target
     }
 }
-
+/**@deprecated The  will be removed in next version. */
 export class VdiRouterModule {
     static forRoot(config: VdiVueRouterOptions): ModuleWithProviders {
         return {
