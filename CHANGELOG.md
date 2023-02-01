@@ -1,5 +1,12 @@
 
 
+# [1.0.0](https://github.com/JinghuiS/vdi/compare/v0.5.0...v1.0.0) (2023-02-01)
+
+
+### Features
+
+* 🎸 delete common/component router module . add use plugin ([9c6aa68](https://github.com/JinghuiS/vdi/commit/9c6aa6869d871e0ec2cd6f0b3dd4e8a37809ec66))
+
 # [0.5.0](https://github.com/JinghuiS/vdi/compare/v0.4.7...v0.5.0) (2023-01-28)
 
 
