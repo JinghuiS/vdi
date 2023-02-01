@@ -158,19 +158,6 @@ const countService = useDependency(CountService)
 
 :::
 
-### 全局注入
-```vue
-import { vdi } from 'vdi'
-import { createApp } from 'vue'
-import AppVue from './App.vue'
-
-createApp(AppVue)
-    .use(vdi([[TestService]]))
-    .mount('#app')
-
-```
-
-
 ### 更多依赖注入的 api
 
 vdi 本身是基于[redi](https://redi.wendell.fun/docs/concepts),所以在类中的使用方式和 redi 一样，只是不需要创建 Injector，
