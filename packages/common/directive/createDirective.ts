@@ -1,9 +1,10 @@
 import { Inject, Many } from '@wendellhu/redi'
 import { App } from 'vue'
-import { VUE_APP } from 'packages'
+
 import { DIRECTIVE } from './directiveToken'
 import { DirectiveImplements } from './types'
 import { Null_Directive_Name } from './nullDirective'
+import { VUE_APP } from 'packages/hooks/token'
 
 export class CreateDirective {
     constructor(
