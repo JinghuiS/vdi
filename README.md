@@ -4,6 +4,9 @@
 
 -   [docs](https://vdi-docs.vercel.app/)
 
+## 破坏性更新
+1.0版本删除了vue-module，overlay相关的api，如果你在使用vue-module overlay请继续留在0.5.0版本
+
 ## 安装
 
 ```bash
