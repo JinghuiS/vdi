@@ -1,5 +1,16 @@
 
 
+# [1.1.0](https://github.com/JinghuiS/vdi/compare/v1.0.0...v1.1.0) (2023-02-02)
+
+
+### Features
+
+* 🎸 add onInjector ([2c0d409](https://github.com/JinghuiS/vdi/commit/2c0d409d780cc3a1943b33d56cacbe8eff366c80))
+* 🎸 export onInjector ([2c0b22b](https://github.com/JinghuiS/vdi/commit/2c0b22b114dd07efbf08d376bdcb0e019e962cb2))
+* 🎸 Export VUE_APP Identifier ([056fe83](https://github.com/JinghuiS/vdi/commit/056fe8366325a720d9095496f7c8fefb5dadfda7))
+* 🎸 onProvider return injector ([a633acf](https://github.com/JinghuiS/vdi/commit/a633acfb82107495a2a305207fda855f27a4e9f5))
+* 🎸 Vdi plugin add injector ([8ae5df3](https://github.com/JinghuiS/vdi/commit/8ae5df33ca8c30524f87de4f6cf427ab498f4a3d))
+
 # [1.0.0](https://github.com/JinghuiS/vdi/compare/v0.5.0...v1.0.0) (2023-02-01)
 
 
