@@ -1,4 +1,5 @@
 export * from './onProvider'
 export * from './useDependency'
 export * from './useInjector'
+export * from './onInjector'
 export { VUE_APP } from './token'
