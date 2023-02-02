@@ -10,4 +10,5 @@ export function onProvider(dependency: Dependency[]) {
     onUnmounted(() => {
         childInjector.dispose()
     })
+    return childInjector
 }
