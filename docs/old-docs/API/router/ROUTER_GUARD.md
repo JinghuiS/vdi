@@ -28,7 +28,7 @@
     ```
 -   ### Details
 
-    -   ROUTER_GUARD 可以注入多个路由守卫，只要在在[VdiRouterModule](/guide/API/router/VdiRouterModule)注入的[vueModule](/guide/API/vueModule),多次注入 ROUTER_GUARD 即可
+    -   ROUTER_GUARD 可以注入多个路由守卫，只要在在[VdiRouterModule](/old-docs/API/router/VdiRouterModule)注入的[vueModule](/old-docs/API/vueModule),多次注入 ROUTER_GUARD 即可
 
 -   ### Example
 

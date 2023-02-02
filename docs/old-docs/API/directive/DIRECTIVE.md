@@ -58,7 +58,7 @@
 
 -   ### Details
 
-    必须先在 vueModule 中引入[DirectiveModule](/guide/API/directive/DirectiveModule)或者 CommonModule，再注入 DIRECTIVE,
+    必须先在 vueModule 中引入[DirectiveModule](/old-docs/API/directive/DirectiveModule)或者 CommonModule，再注入 DIRECTIVE,
     可以注入多个  
      name 属性是必须的，它会是指令的名称:
 

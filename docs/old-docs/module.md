@@ -21,7 +21,7 @@ export const AppModule = vueModule({
 })
 ```
 
-在之前的[快速开始例子](/guide/quick-start#单独页面使用)里，我们声明了 [`CountService`](/guide/quick-start#单独页面使用) 服务，我们可以在当前模块中注入，这样在此模块组件之下的所有组件都可以使用这个服务。
+在之前的[快速开始例子](/old-docs/quick-start#单独页面使用)里，我们声明了 [`CountService`](/old-docs/quick-start#单独页面使用) 服务，我们可以在当前模块中注入，这样在此模块组件之下的所有组件都可以使用这个服务。
 
 ```ts
 import { vueModule } from 'vdi'
@@ -72,7 +72,7 @@ export const AppModule = vueModule({
 
 ## 接管 vue 实例创建过程，并绑定 vueModule
 
-在刚刚的例子里我们声明了[根模块](/guide/module#声明-vuemodule)，现在我们用`createModule`接管 vue 创建实例并把根模板绑定并创建出来
+在刚刚的例子里我们声明了[根模块](/old-docs/module#声明-vuemodule)，现在我们用`createModule`接管 vue 创建实例并把根模板绑定并创建出来
 
 > -   createModule 会根据当前项目的 vue 库，创建 vue 实例
 > -   createModule 会读取 module 中的 declarations，当做根组件传递给 vue 创建组件
@@ -90,4 +90,4 @@ createModule(AppModule).then((vueInstance) => {
 })
 ```
 
-这样我们创建了 vue 实例绑定了 [AppModule](/guide/module#声明-vuemodule)，并且挂载到了 `#app` 元素上。
+这样我们创建了 vue 实例绑定了 [AppModule](/old-docs/module#声明-vuemodule)，并且挂载到了 `#app` 元素上。

@@ -13,7 +13,7 @@ npm install vue-router
 
 ## 路由模块
 
-创建文件 App.routing.module.ts,引入`VdiRouterModule`,当然也可以直接在[AppModule](/guide/module#声明-vuemodule)的`imports`中引入，但是为了更好维护，我们还是声明一个名为 AppRouteingModule 的 vueModule 模块并放在单独文件中
+创建文件 App.routing.module.ts,引入`VdiRouterModule`,当然也可以直接在[AppModule](/old-docs/module#声明-vuemodule)的`imports`中引入，但是为了更好维护，我们还是声明一个名为 AppRouteingModule 的 vueModule 模块并放在单独文件中
 类似于下方的例子
 
 > -   VdiRouterModule 会读取当前项目的 vue-router 库 使用，只是改成依赖注入的模式

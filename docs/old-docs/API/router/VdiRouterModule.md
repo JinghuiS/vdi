@@ -14,7 +14,7 @@ forRoot 把 vue-router 绑定到当前 vue 实例上,forChild 声明模块子路
     **_forRoot_**:
 
     -   `forRoot`的入参跟[vue-router 的 RouterOptions](https://router.vuejs.org/zh/api/#parsequery)几乎保持一致，只是[routes](https://router.vuejs.org/zh/api/#routes)因为分层依赖注入的特性，我们需要做一些处理
-    -   `forRoot`会返回[vueModule](/guide/API/vueModule)，其中包含了创建路由守卫的服务  
+    -   `forRoot`会返回[vueModule](/old-docs/API/vueModule)，其中包含了创建路由守卫的服务  
         入参 routes 类型要经过处理
 
     -   类型为
