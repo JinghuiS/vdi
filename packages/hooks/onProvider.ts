@@ -3,6 +3,16 @@ import { provide, onUnmounted } from 'vue'
 import { VUE_INJECTOR_KEY } from './token'
 import { useInjector } from './useInjector'
 
+/**
+ * Component injector.
+ *
+ * All components under the component can use `useDependency` to obtain the currently injected dependencies
+ *
+ *
+ * 依赖关系注入器.
+ *
+ * 当前组件之下的所有组件都可以通过`useDependency`获取依赖关系
+ */
 export function onProvider(dependency: Dependency[]) {
     let injector = useInjector()
     const childInjector = injector?.createChild(dependency)
