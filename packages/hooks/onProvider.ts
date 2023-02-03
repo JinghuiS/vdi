@@ -19,6 +19,7 @@ import { useInjector } from './useInjector'
  */
 export function onProvider(dependency: Dependency[]) {
     let injector = useInjector()
+
     const childInjector = injector?.createChild(dependency)
     provide(VUE_INJECTOR_KEY, childInjector)
     onUnmounted(() => {

@@ -13,23 +13,11 @@ class TestStartupService {
 }
 
 createApp(AppVue)
-    .use(
-        vdi([
-            [TestService],
-            [
-                CREATED_VUE_APP_EXECUTION,
-                {
-                    useValue: [
-                        TestStartupService,
-                        class ABC {
-                            constructor() {
-                                console.log(112)
-                            }
-                        }
-                    ]
-                }
-            ]
-        ])
-    )
+    // .use(
+    //     vdi([
+    //         [TestService]
+    //         // [CREATED_VUE_APP_EXECUTION, { useClass: TestStartupService }]
+    //     ])
+    // )
     .use(AppRoutes)
     .mount('#app')
