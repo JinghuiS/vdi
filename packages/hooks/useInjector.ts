@@ -9,6 +9,10 @@ export function useInjector(selfInject: boolean = false): Injector {
     if (selfInject) {
         return instanceInjector
     }
+    if (!instanceInjector) {
+        return new Injector()
+    }
+
     const injector = inject<Injector>(VUE_INJECTOR_KEY)
     if (!injector) {
         return new Injector()

@@ -1,5 +1,9 @@
-import { Dependency, Injector } from '@wendellhu/redi'
+import { Dependency, Injector, Optional } from '@wendellhu/redi'
 import { Plugin } from 'vue'
+import {
+    CreatedVueAppExecutionService,
+    nullCreatedVueAppExecutionService
+} from './common/createdVueAppExecution'
 import {
     CREATED_VUE_APP_EXECUTION,
     VUE_APP,
@@ -7,11 +11,12 @@ import {
 } from './hooks/token'
 
 function createdVueAppExecution(injector: Injector) {
-    const executionList = injector.get(CREATED_VUE_APP_EXECUTION)
-    executionList.map((item) => {
-        injector.add(item)
-        injector.get(item)
-    })
+    injector.add([
+        CREATED_VUE_APP_EXECUTION,
+        { useClass: nullCreatedVueAppExecutionService }
+    ])
+    injector.add(CreatedVueAppExecutionService)
+    injector.get(CreatedVueAppExecutionService)
 }
 
 /**
@@ -39,6 +44,7 @@ function vdi(providers?: Dependency[]): Plugin {
                 _providers = [..._providers, ...providers]
             }
             const injector = new Injector(_providers)
+
             createdVueAppExecution(injector)
 
             app.provide(VUE_INJECTOR_KEY, injector)

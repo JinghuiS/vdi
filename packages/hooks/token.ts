@@ -38,6 +38,6 @@ export const VUE_APP = createIdentifier<App>('VUE_APP')
  * 
     
  */
-export const CREATED_VUE_APP_EXECUTION = createIdentifier<Ctor<any>[]>(
+export const CREATED_VUE_APP_EXECUTION = createIdentifier<any>(
     'CREATED_VUE_APP_EXECUTION'
 )
