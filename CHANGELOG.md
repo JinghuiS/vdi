@@ -1,5 +1,13 @@
 
 
+## [1.2.2](https://github.com/JinghuiS/vdi/compare/v1.2.1...v1.2.2) (2023-02-03)
+
+
+### Bug Fixes
+
+* 🐛 CREATED_VUE_APP_EXECUTION error Optimized writing ([8e64314](https://github.com/JinghuiS/vdi/commit/8e643142b18aa802abefe86ef93948f1c63637eb))
+* 🐛 not use vdi plugin  onProvider injector is  undefined ([e63e7e6](https://github.com/JinghuiS/vdi/commit/e63e7e623eed720cf1227bcbc605a30226aa0844))
+
 ## [1.2.1](https://github.com/JinghuiS/vdi/compare/v1.2.0...v1.2.1) (2023-02-03)
 
 
