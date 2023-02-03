@@ -1,5 +1,12 @@
 
 
+# [1.2.0](https://github.com/JinghuiS/vdi/compare/v1.1.0...v1.2.0) (2023-02-03)
+
+
+### Features
+
+* 🎸 add CREATED_VUE_APP_EXECUTION Identifier ([2914f00](https://github.com/JinghuiS/vdi/commit/2914f00e99895af127b1ca898e8b894ec836d999))
+
 # [1.1.0](https://github.com/JinghuiS/vdi/compare/v1.0.0...v1.1.0) (2023-02-02)
 
 
