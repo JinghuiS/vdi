@@ -1,5 +1,12 @@
 
 
+## [1.2.1](https://github.com/JinghuiS/vdi/compare/v1.2.0...v1.2.1) (2023-02-03)
+
+
+### Bug Fixes
+
+* 🐛 CREATED_VUE_APP_EXECUTION No export ([7a96307](https://github.com/JinghuiS/vdi/commit/7a96307460e9027682ce8bf9af5c03391e341fd1))
+
 # [1.2.0](https://github.com/JinghuiS/vdi/compare/v1.1.0...v1.2.0) (2023-02-03)
 
 
