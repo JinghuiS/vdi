@@ -14,7 +14,7 @@ export const VUE_APP = createIdentifier<App>('VUE_APP')
 /**
  * When vdi is initialized, the dependency to be executed
  * 
- * @useValue class[]
+ * @useClass class
  * 
  * @example
  * 
@@ -26,13 +26,8 @@ export const VUE_APP = createIdentifier<App>('VUE_APP')
  * 
  * createApp(AppVue)
     .use(
-        vdi([[CREATED_VUE_APP_EXECUTION,
-                {
-                    useValue: [
-                        TestStartupService,
-                    ]
-                }
-            ]
+        vdi([[CREATED_VUE_APP_EXECUTION,{useClass: TestStartupService}],
+            [CREATED_VUE_APP_EXECUTION,{useClass: Test2StartupService}]
         ])
     )
  * 
