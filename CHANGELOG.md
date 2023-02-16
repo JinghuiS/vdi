@@ -1,5 +1,12 @@
 
 
+# [1.4.0](https://github.com/JinghuiS/vdi/compare/v1.3.0...v1.4.0) (2023-02-16)
+
+
+### Features
+
+* 🎸 add createDirective ([5224a00](https://github.com/JinghuiS/vdi/commit/5224a00feaf7d30bfe3f2e2a9ec9f28c8b4a0bc9))
+
 # [1.3.0](https://github.com/JinghuiS/vdi/compare/v1.2.2...v1.3.0) (2023-02-10)
 
 
