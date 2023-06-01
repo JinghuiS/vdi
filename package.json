@@ -59,7 +59,7 @@
         }
     },
     "dependencies": {
-        "@wendellhu/redi": "^0.6.2",
+        "@wendellhu/redi": "^0.6.4",
         "vue": "^3.2.45",
         "vue-router": "^4.1.6"
     },
