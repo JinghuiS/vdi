@@ -1,5 +1,12 @@
 
 
+# [1.5.0](https://github.com/JinghuiS/vdi/compare/v1.4.0...v1.5.0) (2023-06-01)
+
+
+### Features
+
+* 🎸 暴露VUE_INJECTOR_KEY ([70996ff](https://github.com/JinghuiS/vdi/commit/70996ff9c8df24d9909a5999d33874ff3e3d60cd))
+
 # [1.4.0](https://github.com/JinghuiS/vdi/compare/v1.3.0...v1.4.0) (2023-02-16)
 
 
