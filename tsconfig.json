@@ -1,9 +1,9 @@
 {
     "compilerOptions": {
-        "moduleResolution": "nodenext",
         "target": "esnext",
         "useDefineForClassFields": true,
         "module": "esnext",
+        "moduleResolution": "node",
         "experimentalDecorators": true,
         "strict": true,
         "jsx": "preserve",
