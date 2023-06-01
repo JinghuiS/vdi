@@ -1,5 +1,13 @@
 
 
+## [1.5.1](https://github.com/JinghuiS/vdi/compare/v1.5.0...v1.5.1) (2023-06-01)
+
+
+### Bug Fixes
+
+* 🐛 change tsconfig ([1c20e31](https://github.com/JinghuiS/vdi/commit/1c20e3107dd5d59b0af184f8e1c62cb8d88792c3))
+* 🐛 typescript5.0 not find type ([0e93d0d](https://github.com/JinghuiS/vdi/commit/0e93d0d72834d349940aa9f2439e339e75fb5a15))
+
 # [1.5.0](https://github.com/JinghuiS/vdi/compare/v1.4.0...v1.5.0) (2023-06-01)
 
 
