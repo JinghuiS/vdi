@@ -15,6 +15,7 @@ function createdVueAppExecution(injector: Injector) {
         CREATED_VUE_APP_EXECUTION,
         { useClass: nullCreatedVueAppExecutionService }
     ])
+    //@ts-ignore
     injector.add(CreatedVueAppExecutionService)
     injector.get(CreatedVueAppExecutionService)
 }

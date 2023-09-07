@@ -5,9 +5,12 @@ import { onProvider, useDependency } from 'packages'
 
 import HelloWorld from './components/HelloWorld.vue'
 import { TestService } from './test.service'
+import { Quantity } from '@wendellhu/redi'
 
 onProvider([[TestService]])
-const testService = useDependency(TestService, { self: true })
+const testService = useDependency(TestService, {
+    self: true
+})
 
 function changeTest(a: any) {
     testService.Test.value = '父组件的2'

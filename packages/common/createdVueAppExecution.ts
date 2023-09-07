@@ -5,6 +5,6 @@ export class nullCreatedVueAppExecutionService {}
 
 export class CreatedVueAppExecutionService {
     constructor(
-        @Many(CREATED_VUE_APP_EXECUTION) public executionList?: Ctor<any>[]
+        @Many(CREATED_VUE_APP_EXECUTION) public executionList?: any[]
     ) {}
 }
