@@ -1,5 +1,12 @@
 
 
+# [1.6.0](https://github.com/JinghuiS/vdi/compare/v1.5.1...v1.6.0) (2023-09-07)
+
+
+### Features
+
+* 🎸 add quantity ([4b425b8](https://github.com/JinghuiS/vdi/commit/4b425b8db1a535a28ce3e7e8c79b04222bcda418))
+
 ## [1.5.1](https://github.com/JinghuiS/vdi/compare/v1.5.0...v1.5.1) (2023-06-01)
 
 
