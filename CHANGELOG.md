@@ -1,5 +1,12 @@
 
 
+## [1.6.1](https://github.com/JinghuiS/vdi/compare/v1.6.0...v1.6.1) (2023-09-08)
+
+
+### Bug Fixes
+
+* 🐛 修复 use 错误 ([20b0480](https://github.com/JinghuiS/vdi/commit/20b0480455b58cc2ddb853c145febcba9068d5d7))
+
 # [1.6.0](https://github.com/JinghuiS/vdi/compare/v1.5.1...v1.6.0) (2023-09-07)
 
 
