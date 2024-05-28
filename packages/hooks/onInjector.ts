@@ -1,4 +1,4 @@
-import { Dependency, Injector } from '@wendellhu/redi'
+import { Injector } from '@wendellhu/redi'
 import { provide, onUnmounted } from 'vue'
 import { VUE_APP, VUE_INJECTOR_KEY } from './token'
 import { useDependency } from './useDependency'

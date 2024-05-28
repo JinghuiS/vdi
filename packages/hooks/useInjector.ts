@@ -1,19 +1,10 @@
 import { Injector } from '@wendellhu/redi'
-import { getCurrentInstance, inject } from 'vue'
+import { injectLocal } from '@vueuse/core'
+
 import { VUE_INJECTOR_KEY } from './token'
 
-export function useInjector(selfInject: boolean = false): Injector {
-    const instance = getCurrentInstance()
-    //@ts-ignore
-    const instanceInjector = instance!.provides[VUE_INJECTOR_KEY]
-    if (selfInject) {
-        return instanceInjector
-    }
-    if (!instanceInjector) {
-        return new Injector()
-    }
-
-    const injector = inject<Injector>(VUE_INJECTOR_KEY)
+export function useInjector(): Injector {
+    const injector = injectLocal<Injector>(VUE_INJECTOR_KEY)
     if (!injector) {
         return new Injector()
     }

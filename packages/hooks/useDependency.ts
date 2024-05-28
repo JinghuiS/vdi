@@ -47,7 +47,7 @@ function useDependency<T>(
     },
     lookUp?: LookUp
 ) {
-    const injector = useInjector(options?.self)
+    const injector = useInjector()
 
     if (options?.quantity) {
         return injector!.get(provider, options.quantity, lookUp)
