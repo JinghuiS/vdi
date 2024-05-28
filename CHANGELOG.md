@@ -1,5 +1,12 @@
 
 
+# [1.7.0](https://github.com/JinghuiS/vdi/compare/v1.6.1...v1.7.0) (2024-05-28)
+
+
+### Features
+
+* 🎸 change inject update @wendellhu/redi ([9ae0375](https://github.com/JinghuiS/vdi/commit/9ae037560ad745f9f2ae4493a2c657b14e522a76))
+
 ## [1.6.1](https://github.com/JinghuiS/vdi/compare/v1.6.0...v1.6.1) (2023-09-08)
 
 
