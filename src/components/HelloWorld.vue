@@ -1,5 +1,6 @@
 <script lang="ts">
 import { TestService } from '@/test.service'
+import { LookUp } from '@wendellhu/redi'
 import { onProvider, useDependency } from 'packages'
 import { ref } from 'vue'
 </script>
@@ -11,10 +12,10 @@ const emit = defineEmits(['click'])
 onProvider([[TestService]])
 
 const testService = useDependency(TestService)
-const FatherTestService = useDependency(TestService)
+const FatherTestService = useDependency(TestService, LookUp.SKIP_SELF)
 
 function change() {
-    testService.Test.value = '2'
+    testService.Test.value = '子组件的2'
     emit('click', '5')
 }
 
@@ -25,6 +26,10 @@ const count = ref(0)
     <button @click="change">
         {{ testService.Test }}
     </button>
+    <div>
+        father
+        {{ FatherTestService.Test }}
+    </div>
 </template>
 
 <style scoped>

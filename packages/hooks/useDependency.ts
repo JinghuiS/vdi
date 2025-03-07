@@ -1,59 +1,40 @@
 import { DependencyIdentifier, LookUp, Quantity } from '@wendellhu/redi'
 import { useInjector } from './useInjector'
 
-function useDependency<T>(
+export function useDependency<T>(
     id: DependencyIdentifier<T>,
-    options?: {
-        self: boolean
-        quantity?: Quantity.MANY | Quantity.OPTIONAL | Quantity.REQUIRED
-        quantityOrLookup?: Quantity | LookUp
-    },
     lookUp?: LookUp
 ): T
-function useDependency<T>(
+export function useDependency<T>(
     id: DependencyIdentifier<T>,
-    options?: { self: boolean; quantity: Quantity.MANY },
+    quantity: Quantity.MANY,
     lookUp?: LookUp
 ): T[]
-function useDependency<T>(
+export function useDependency<T>(
     id: DependencyIdentifier<T>,
-    options?: { self: boolean; quantity: Quantity.OPTIONAL },
-
+    quantity: Quantity.OPTIONAL,
     lookUp?: LookUp
 ): T | null
-function useDependency<T>(
+export function useDependency<T>(
     id: DependencyIdentifier<T>,
-    options?: { self: boolean; quantity: Quantity.REQUIRED },
-
+    quantity: Quantity.REQUIRED,
     lookUp?: LookUp
 ): T
-function useDependency<T>(
+export function useDependency<T>(
     id: DependencyIdentifier<T>,
-    options?: { self: boolean; quantity?: Quantity },
-
+    quantity: Quantity,
     lookUp?: LookUp
-): T[] | T | null
-function useDependency<T>(
+): T | T[] | null
+export function useDependency<T>(
     id: DependencyIdentifier<T>,
-    options?: { self: boolean; quantityOrLookup?: Quantity | LookUp },
+    quantity?: Quantity,
     lookUp?: LookUp
-): T[] | T | null
-function useDependency<T>(
-    provider: DependencyIdentifier<T>,
-    options?: {
-        self: boolean
-        quantity?: Quantity.MANY | Quantity.OPTIONAL | Quantity.REQUIRED
-        quantityOrLookup?: Quantity | LookUp
-    },
+): T | T[] | null
+export function useDependency<T>(
+    id: DependencyIdentifier<T>,
+    quantityOrLookUp?: Quantity | LookUp,
     lookUp?: LookUp
-) {
+): T | T[] | null {
     const injector = useInjector()
-
-    if (options?.quantity) {
-        return injector!.get(provider, options.quantity, lookUp)
-    }
-
-    return injector!.get(provider, lookUp)
+    return injector.get<T>(id, quantityOrLookUp, lookUp)
 }
-
-export { useDependency }
