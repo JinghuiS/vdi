@@ -1,5 +1,12 @@
 
 
+# [1.8.0](https://github.com/JinghuiS/vdi/compare/v1.7.0...v1.8.0) (2025-03-07)
+
+
+### Features
+
+* 🎸 修改api,符合redidi ([cc8614f](https://github.com/JinghuiS/vdi/commit/cc8614f61855820308cf197743d5dfb65a911363))
+
 # [1.7.0](https://github.com/JinghuiS/vdi/compare/v1.6.1...v1.7.0) (2024-05-28)
 
 
